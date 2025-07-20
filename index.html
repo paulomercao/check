@@ -71,588 +71,30 @@
   <div id="resultado"></div>
   <button id="reiniciar" style="display:none">Reiniciar</button>
   <script>
-const todasLasPreguntas = [
-  {
-    "pregunta": "Un empleado de una sucursal está realizando una cotización para un cliente. Para ello, necesita acceder a la información confidencial sobre precios que se encuentra en los servidores internos de la oficina central. ¿A qué tipo de red debería acceder el empleado? LAN y WAN que pertenecen a una organización. Una intranet está diseñada para que solo puedan acceder a ella los miembros y empleados de la organización, u otras personas autorizadas.",
-    "opciones": [
-      "Internet",
-      "Una intranet",
-      "Una red de área local",
-      "Una extranet"
-    ],
-    "respuesta": 1
-  },
-  {
-    "pregunta": "¿Cuáles son los dos criterios que se utilizan para seleccionar un medio de red entre varios medios de red? (Elija dos opciones). correctamente seleccionado puede transportar correctamente una señal, el entorno en el que se debe instalar el medio seleccionado, la cantidad de datos y la velocidad a la que los datos se deben transmitir, y el costo del medio y de su instalación.",
-    "opciones": [
-      "La distancia que el medio seleccionado puede transportar una señal",
-      "La cantidad de dispositivos intermedios instalados en la red",
-      "El costo de los dispositivos finales que se utilizan en la red",
-      "El entorno en el que se debe instalar el medio seleccionado",
-      "Los tipos de datos que se deben priorizar"
-    ],
-    "respuesta": [0, 3]
-  },
-  {
-    "pregunta": "Un usuario está implementando una política de seguridad en una red de oficina pequeña. ¿Cuáles son las dos acciones que proporcionarían los requisitos mínimos de seguridad para esta red? Elija dos opciones. de prevención y de detección de intrusiones, se asocian con las redes empresariales en lugar de las redes domésticas. Normalmente, la instalación de un software antivirus y antimalware, y la implementación de un firewall son los requisitos mínimos para las redes domésticas. La instalación de una red inalámbrica doméstica no mejora la seguridad de la red, y requiere tomar medidas de seguridad adicionales.",
-    "opciones": [
-      "La implementación de un sistema de detección de intrusiones",
-      "La instalación de una red inalámbrica",
-      "La implementación de un firewall",
-      "El agregado de un dispositivo de prevención de intrusiones exclusivo",
-      "La instalación de un software antivirus"
-    ],
-    "respuesta": [2, 4]
-  },
-  {
-    "pregunta": "¿Cuál de estas interfaces permite la administración remota de un switch de capa 2? switch virtual interface) que proporciona un medio para administrar el dispositivo de manera remota.",
-    "opciones": [
-      "La primera interfaz de puerto Ethernet",
-      "La interfaz de puerto de consola",
-      "La interfaz virtual del switch",
-      "La interfaz auxiliar"
-    ],
-    "respuesta": 2
-  },
-  {
-    "pregunta": "¿Qué función tiene la tecla de tabulación al introducir un comando en IOS? un comando, IOS completa el resto del comando.",
-    "opciones": [
-      "Desplaza el cursor hacia el principio de la línea siguiente.",
-      "Completa el resto de una palabra escrita parcialmente en un comando.",
-      "Anula el comando actual y vuelve al modo de configuración.",
-      "Sale del modo de configuración y vuelve al modo EXEC del usuario."
-    ],
-    "respuesta": 1
-  },
-  {
-    "pregunta": "Consulte la ilustración. Un administrador de redes está configurando el control de acceso al switch SW1. Si el administrador utiliza una conexión de consola para conectarse al switch, ¿cuál de las siguientes contraseñas se necesita para acceder al modo EXEC del usuario? Examen básico de conectividad de red y comunicaciones configurada con el comando line VTY . Para acceder al modo EXEC del usuario, se requiere la contraseña configurada aquí. Para obtener acceso a través del puerto de consola, se requiere la contraseña configurada con el comando line console 0 , y la contraseña de enable y la contraseña secreta de enable se utilizan para otorgar acceso al modo EXEC privilegiado.",
-    "opciones": [
-      "letmein",
-      "secretin",
-      "lineconin",
-      "linevtyin"
-    ],
-    "respuesta": 2
-  },
-  {
-    "pregunta": "Un técnico configura un switch con los siguientes comandos: SwitchA(config)# interface vlan 1 SwitchA(config-if)# ip address 192.168.1.1 255.255.255.0 SwitchA(config-if)# no shutdown ¿Qué configura el técnico? interfaz virtual de switch. Esto permite que el switch se pueda administrar de forma remota en la red.",
-    "opciones": [
-      "Acceso físico al puerto de switch",
-      "Cifrado de contraseñas",
-      "Acceso por Telnet",
-      "SVI"
-    ],
-    "respuesta": 3
-  },
-  {
-    "pregunta": "¿Cuáles de las siguientes son dos características de la RAM en un dispositivo Cisco? Elija dos opciones. dispositivo. configuración. Cisco. se almacena en la RAM. operaciones de red. La configuración en ejecución se almacena en la RAM. Este tipo de memoria se considera memoria volátil porque los datos se pierden al apagar y volver a encender. La memoria flash almacena IOS y envía una copia de este sistema a la RAM cuando se enciende un dispositivo. La memoria flash es no volátil porque retiene el contenido almacenado durante una pérdida de alimentación.",
-    "opciones": [
-      "El contenido de la RAM se pierde al apagar y volver a encender el dispositivo.",
-      "La RAM puede almacenar varias versiones de IOS y de archivos de configuración.",
-      "La RAM proporciona almacenamiento no volátil.",
-      "La RAM es un componente de los switches Cisco, pero no de los routers Cisco.",
-      "La configuración que está activamente en ejecución en el dispositivo se almacena en la RAM."
-    ],
-    "respuesta": [0, 4]
-  },
-  {
-    "pregunta": "¿Cuáles son los dos nombres de host que cumplen las pautas de convenciones de nomenclatura en dispositivos con Cisco IOS? Elija dos opciones. deben cumplir los siguientes criterios: Comenzar con una letra. No contener espacios. Finalizar con una letra o dígito. Utilizar únicamente letras, dígitos y guiones. Tener menos de 64 caracteres de longitud.",
-    "opciones": [
-      "Floor(15)",
-      "SwBranch799",
-      "Branch2!",
-      "HO Floor 17",
-      "RM-3-Switch-2A4"
-    ],
-    "respuesta": [1, 4]
-  },
-  {
-    "pregunta": "¿Cuáles de las siguientes son tres características de una SVI? Elija tres opciones. medios. cualquier ubicación. del switch. SVI se crean en el software dado que no hay hardware físico asociado a ellas. Estas interfaces proporcionan un medio para administrar un switch de manera remota en una red que utiliza IP. Cada switch viene con una SVI que aparece en la configuración predeterminada inicial. La SVI predeterminada es la VLAN 1.",
-    "opciones": [
-      "Proporciona una forma de administrar un switch de manera remota.",
-      "Es una interfaz especial que permite la conectividad de diferentes tipos de medios.",
-      "No está asociada a ninguna interfaz física en un switch.",
-      "Está asociada con la VLAN 1 de manera predeterminada.",
-      "Se requiere para permitir la conectividad de cualquier dispositivo en cualquier ubicación.",
-      "Está diseñada como un protocolo de seguridad para proteger los puertos del switch."
-    ],
-    "respuesta": [0, 2, 3]
-  },
-  {
-    "pregunta": "Una la descripción con el modo de IOS relacionado. (No se utilizan todas las opciones). Introduction to Networks (Versión 7.00) – Examen básico de conectividad de red y comunicacionesModo EXEC del usuario: Modo EXEC privilegiado Modo de configuración global dispositivo.",
-    "opciones": [
-      "La cantidad de comandos de control básicos es limitada.",
-      "Es la primera entrada a la CLI de un dispositivo IOS.",
-      "Se accede mediante la introducción del comando enable.",
-      "Se identifica con una petición de entrada que termina con el carácter #.",
-      "Los cambios que se realizan afectan el funcionamiento global del dispositivo.",
-      "Se accede mediante la introducción del comando configure terminal."
-    ],
-    "respuesta": [
-      {"modo EXEC del usuario": [0, 1]},
-      {"Modo EXEC privilegiado": [2, 3]},
-      {"Modo de configuración global": [4, 5]}
-    ]
-  },
-  {
-    "pregunta": "En el comando show running-config , ¿qué parte de la sintaxis está representada por running-config ? parte de la sintaxis, running-config, es la palabra clave. La palabra clave especifica lo que debe mostrarse como resultado del comando show .",
-    "opciones": [
-      "una variable",
-      "un prompt",
-      "el comando",
-      "una palabra clave"
-    ],
-    "respuesta": 3
-  },
-  {
-    "pregunta": "Después de realizar cambios de configuración en un switch Cisco, un administrador de redes emite el comando copy running-config startup-config . ¿Qué sucede al emitir este comando? recientemente. original. configuración operativa actual reemplaza el archivo de configuración de inicio almacenado en la NVRAM. El archivo de configuración guardado en la NVRAM se carga cuando se reinicia el dispositivo.",
-    "opciones": [
-      "La nueva configuración se almacena en la memoria flash.",
-      "Si se reinicia el switch, se carga la nueva configuración.",
-      "El archivo de IOS actual se reemplaza por el archivo configurado recientemente.",
-      "Se eliminan los cambios de configuración y se restaura la configuración original."
-    ],
-    "respuesta": 1
-  },
-  {
-    "pregunta": "¿Qué comando evita que todas las contraseñas sin encriptar se muestren como texto no cifrado en un archivo de configuración? texto no cifrado en los archivos de configuración, el administrador puede ejecutar el comando service password-encryption . Este comando encripta todas las contraseñas configuradas en el archivo de configuración.",
-    "opciones": [
-      "(config-line)# password secret",
-      "(config)# enable secret Secret_Password",
-      "(config)# enable password secret",
-      "(config)# enable secret Encrypted_Password",
-      "(config)# service password-encryption"
-    ],
-    "respuesta": 4
-  },
-  {
-    "pregunta": "Un administrador de red ingresa el comando service password- encryption en el modo de configuración de un router. ¿Qué logra este comando? configuración que se almacenan actualmente en NVRAM. configuración en ejecución. personal de servicio externo que debe realizar el mantenimiento del enrutador. enable secret password . vínculos WAN serie. contraseñas en texto no cifrado. Utilice el comando de global config service password-encryption para cifrar todas las contraseñas.",
-    "opciones": [
-      "Este comando cifra automáticamente las contraseñas en los archivos de configuración que se almacenan actualmente en NVRAM.",
-      "Este comando impide que alguien vea las contraseñas de configuración en ejecución.",
-      "Este comando proporciona una contraseña cifrada exclusiva para el personal de servicio externo que debe realizar el mantenimiento del enrutador.",
-      "Este comando habilita un algoritmo de cifrado seguro para el comando enable secret password .",
-      "Este comando cifra las contraseñas a medida que se transmiten a través de vínculos WAN serie."
-    ],
-    "respuesta": 1
-  },
-  {
-    "pregunta": "¿Cuál de estos métodos pueden utilizar dos PC para asegurar que no se descarten los paquetes debido a que se envían demasiados datos demasiado rápido? mecanismo que permita que el origen y el destino establezcan el intervalo de la transmisión y la recepción de datos. El control del flujo permite esto al asegurar que los datos no se envíen demasiado rápido a fin de que se reciban correctamente.",
-    "opciones": [
-      "Tiempo de espera de respuesta",
-      "Método de acceso",
-      "Control del flujo",
-      "Encapsulación"
-    ],
-    "respuesta": 2
-  },
-  {
-    "pregunta": "¿Cuál de estas afirmaciones describe de forma precisa un proceso de encapsulación TCP/IP cuando una PC envía datos a la red? transporte. Internet. envía segmentos a la capa de Internet. La capa de Internet envía los paquetes a la capa de acceso a la red, que genera tramas y luego las convierte en bits. Los bits se liberan en los medios de red.",
-    "opciones": [
-      "Los paquetes se envían de la capa de acceso a la red a la capa de transporte.",
-      "Los segmentos se envían de la capa de transporte a la capa de Internet.",
-      "Las tramas se envían de la capa de acceso a la red a la capa de Internet.",
-      "Los datos se envían de la capa de Internet a la capa de acceso a la red."
-    ],
-    "respuesta": 1
-  },
-  {
-    "pregunta": "¿Qué tres protocolos de la capa de aplicación forman parte del paquete del protocolo TCP/IP? Elija tres opciones. del protocolo TCP/IP. ARP y PPP son protocolos de la capa de acceso a la red, y NAT es un protocolo de la capa de Internet del paquete del protocolo TCP/IP.",
-    "opciones": [
-      "ARP",
-      "FTP",
-      "NAT",
-      "PPP",
-      "DHCP",
-      "DNS"
-    ],
-    "respuesta": [1, 4, 5]
-  },
-  {
-    "pregunta": "¿Qué nombre se le asigna a la PDU de la capa de transporte? por los medios de la red. Durante el proceso, varios protocolos le agregan información en cada nivel. En cada etapa del proceso, una unidad de datos de protocolo (PDU) tiene un nombre distinto para reflejar sus nuevas funciones. Las PDU se nombran según los protocolos del paquete TCP/IP: Datos: término general para la PDU que se utiliza en la capa de aplicación Segmento: PDU de la capa de transporte Paquete: PDU de la capa de red Trama: PDU de la capa de enlace de datos Bits: PDU de la capa física que se utiliza cuando se transmiten datos físicamente por el medio",
-    "opciones": [
-      "paquete",
-      "trama",
-      "segmento",
-      "bits",
-      "datos"
-    ],
-    "respuesta": 2
-  },
-  {
-    "pregunta": "Cuando el direccionamiento IPv4 se configura manualmente en un servidor web, ¿cuál es la propiedad de la configuración IPv4 que identifica las porciones de red y de host de una dirección IPv4? componentes: Dirección IPv4: identifica de manera única una terminal en la red. Máscara de subred: determina la porción de dirección de red y la porción de host para una dirección IPv4. Gateway predeterminado: es la dirección IP de la interfaz de router utilizada para la comunicación con hosts de otra red. Dirección del servidor DNS: es la dirección IP del servidor del sistema de nombres de dominio (DNS). En las terminales, la dirección del servidor DHCP (si se utiliza) no se configura manualmente. La proporciona un servidor DHCP cuando una terminal solicita una dirección IP.",
-    "opciones": [
-      "Dirección del servidor DHCP",
-      "Máscara de subred",
-      "Gateway predeterminado",
-      "Dirección del servidor DNS"
-    ],
-    "respuesta": 1
-  },
-  {
-    "pregunta": "¿Qué proceso implica colocar una PDU dentro de otra PDU? como encapsulación. En las redes, la encapsulación tiene lugar cuando una unidad de datos de protocolo se transporta dentro del campo de datos de la siguiente unidad de datos de protocolo inferior.",
-    "opciones": [
-      "Encapsulamiento",
-      "segmentación",
-      "Control del flujo",
-      "Codificación"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Qué formato de PDU se utiliza cuando la NIC de un host recibe bits del medio de red? formato de trama en la capa de enlace de datos. En la capa de red, la PDU es un paquete. En la capa de transporte, la PDU es un segmento. Un archivo es una estructura de datos que se puede utilizar en la capa de aplicación.",
-    "opciones": [
-      "Trama",
-      "Paquete",
-      "Archivo",
-      "Segmento"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "Observe la ilustración. El ServidorB está intentando ponerse en contacto con HostA. ¿Qué dos instrucciones identifican correctamente el direccionamiento que ServidorB generará en el proceso? (Escoja dos opciones). Módulos 1 – 3 Examen de conectividad de red básica y comunicaciones Q26 HostA. RouterB. SwitchB. contiene la dirección IP del dispositivo de destino en la red remota y una trama que contiene la dirección MAC del dispositivo de puerta de enlace predeterminado en la red local.",
-    "opciones": [
-      "ServidorB generará un paquete con la dirección IP de destino de HostA.",
-      "ServidorB generará una trama con la dirección MAC de destino del RouterB.",
-      "ServidorB generará un paquete con la dirección IP de destino de RouterA.",
-      "ServidorB generará una trama con la dirección MAC de destino del SwitchB.",
-      "ServidorB generará una trama con la dirección MAC de destino de RouterA.",
-      "ServidorB generará un paquete con la dirección IP de destino del RouterB."
-    ],
-    "respuesta": [0, 1]
-  },
-  {
-    "pregunta": "Un cliente Web está recibiendo una respuesta para una página Web de un servidor Web. Desde la perspectiva del cliente, ¿cuál es el orden correcto de la pila de protocolos que se usa para decodificar la transmisión recibida?",
-    "opciones": [
-      "Ethernet, IP, TCP, HTTP",
-      "HTTP, Ethernet, IP, TCP",
-      "HTTP, TCP, IP, Ethernet",
-      "Ethernet, TCP, IP, HTTP"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Cuáles son las dos capas del modelo OSI que tienen la misma funcionalidad que las dos capas del modelo TCP/IP?(Escoge dos.) a la capa de acceso a la red TCP/IP. La funcionalidad de capa de transporte OSI es equivalente a la de la capa de transporte TCP/IP, y la de la capa de red OSI es equivalente a la de la capa de Internet TCP/IP. Las capas de aplicación, presentación y sesión del modelo OSI se alinean con la capa de aplicación del modelo TCP/IP.",
-    "opciones": [
-      "Transporte",
-      "Sesión",
-      "Enlace de datos",
-      "Física",
-      "Red"
-    ],
-    "respuesta": [0, 4]
-  },
-  {
-    "pregunta": "¿En cuál de estas capas del modelo OSI se agregaría una dirección lógica durante el encapsulamiento? agregan en la capa de red. Las direcciones físicas se agregan en la capa de enlace de datos. Las direcciones de puertos se agregan en la capa de transporte. En la capa física, no se agregan direcciones.",
-    "opciones": [
-      "Capa de red",
-      "Capa física",
-      "Capa de enlace de datos",
-      "Capa de transporte"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Cuál de estos dispositivos cumple la función de determinar la ruta que los mensajes deben tomar a través de las internetworks? mensajes a través de la red. Los firewalls se utilizan para filtrar el tráfico entrante y saliente. Los módems DSL se utilizan para proporcionar una conexión a Internet en el hogar o en una organización.",
-    "opciones": [
-      "Un módem DSL",
-      "Un servidor Web",
-      "Un router",
-      "Un firewall"
-    ],
-    "respuesta": 2
-  },
-  {
-    "pregunta": "Abra la actividad de PT. Complete las instrucciones de la actividad y luego responda las pregunta. Módulos 1 – 3: Examen de conectividad de red básica y comunicaciones Q29¿Cual es la dirección IP de la interfaz virtual del switch (SVI), en el Switch0? configuration o el comando show ip interfaces brief mostrarán la dirección IP de la interfaz virtual del switch (SVI).",
-    "opciones": [
-      "192.168.10.1",
-      "192.168.5.0",
-      "192.168.5.10",
-      "192.168.10.5"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Por qué un switch de capa 2 necesitaría una dirección IP? conectadas. predeterminado. para transmitir tramas a los dispositivos conectados. Sin embargo, cuando se accede a un switch de forma remota a través de la red, debe tener una dirección de capa 3. La dirección IP se debe aplicar a una interfaz virtual, no a una interfaz física. Son los routers, no los switches, los que funcionan como gateways predeterminados.",
-    "opciones": [
-      "Para habilitar el switch de modo que se administre de forma remota.",
-      "Para habilitar el switch para que envíe tramas de broadcast a las PC conectadas.",
-      "Para habilitar el switch para que reciba tramas de las PC conectadas.",
-      "Para habilitar el switch para que funcione como un gateway predeterminado."
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "Consulte la ilustración. Un administrador intenta configurar el switch pero recibe el mensaje de error que se muestra en la ilustración. ¿Cuál es el problema? antes de emitir el comando. acceder al modo de configuración global. comando configure terminal o una versión abreviada, como config t , desde el modo EXEC privilegiado. En esta situación, el administrador está en el modo EXEC del usuario, según lo indica el símbolo > después del nombre de host. El administrador debe utilizar el comando enable para pasar al modo EXEC privilegiado antes de introducir el comando configure terminal .",
-    "opciones": [
-      "El administrador primero debe ingresar al modo EXEC privilegiado antes de emitir el comando.",
-      "El administrador se debe conectar a través del puerto de consola para acceder al modo de configuración global.",
-      "El administrador ya se encuentra en el modo de configuración global.",
-      "Se debe utilizar el comando completo configure terminal ."
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Qué término describe un modelo informático en el que el software de servidor se ejecuta en equipos dedicados?",
-    "opciones": [
-      "Intranet",
-      "cliente servidor",
-      "Extranet",
-      "Internet"
-    ],
-    "respuesta": 1
-  },
-  {
-    "pregunta": "¿En qué capa OSI se agrega un número de puerto de destino a una PDU durante el proceso de encapsulación?",
-    "opciones": [
-      "Capa de enlace de datos",
-      "Capa de red",
-      "Capa de transporte",
-      "Capa de aplicación"
-    ],
-    "respuesta": 2
-  },
-  {
-    "pregunta": "¿Qué tipo de tráfico de red requiere QoS?",
-    "opciones": [
-      "Compras en línea",
-      "Videoconferencia",
-      "Wiki",
-      "Correo electrónico"
-    ],
-    "respuesta": 1
-  },
-  {
-    "pregunta": "¿Cuál de las siguientes es una ventaja de que los dispositivos de red utilicen protocolos de estándar abierto? pueden intercambiar datos correctamente. dispositivos del mismo proveedor. estándar abierto, como la suite TCP/IP, es que los clientes y los servidores que ejecutan diferentes sistemas operativos pueden comunicarse entre sí. Los protocolos de estándar abierto facilitan la innovación y la competencia entre los proveedores y a través de los mercados, y pueden reducir la aparición de monopolios en los mercados de la industria de redes.",
-    "opciones": [
-      "Un host cliente y un servidor con distintos sistemas operativos pueden intercambiar datos correctamente.",
-      "La competencia y la innovación se limitan a tipos específicos de productos.",
-      "Las comunicaciones de red se limitan a transferencias de datos entre dispositivos del mismo proveedor.",
-      "Un único ISP en cada mercado puede controlar el acceso a Internet."
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "Un técnico de redes está trabajando en la red inalámbrica en una clínica médica. El técnico configura accidentalmente la red inalámbrica para que los pacientes puedan ver los datos de los registros médicos de otros pacientes. ¿Cuál de las cuatro características de la red se ha violado en esta situación? que se encuentran en la red. En este caso, debido a que los datos confidenciales se han puesto a disposición de usuarios no autorizados, la característica de seguridad de la red ha fallado.",
-    "opciones": [
-      "Escalabilidad",
-      "Seguridad",
-      "Confiabilidad",
-      "Calidad de servicio (QoS)",
-      "Tolerancia a fallas"
-    ],
-    "respuesta": 1
-  },
-  {
-    "pregunta": "¿Qué método permite que un equipo reaccione en consecuencia cuando solicita datos de un servidor y el servidor tarda demasiado en responder? antes de un tiempo aceptable, la computadora supone que no habrá ninguna respuesta y reacciona en consecuencia.",
-    "opciones": [
-      "método de acceso",
-      "tiempo de espera de respuesta",
-      "Encapsulamiento",
-      "Control del flujo"
-    ],
-    "respuesta": 1
-  },
-  {
-    "pregunta": "Al intentar solucionar un problema de red, un técnico realizó varios cambios al archivo de configuración del router actual. Los cambios no solucionaron el problema y no se guardaron. ¿Qué puede hacer el técnico para descartar los cambios y trabajar con el archivo en la NVRAM? cambios que se realizaron al archivo de configuración en ejecución. La solución es reiniciar el router sin guardar la configuración en ejecución. El comando copy startup-config running-config no sobrescribe el archivo de configuración en ejecución con el archivo de configuración almacenado en la NVRAM, sino que, simplemente, tiene un efecto aditivo.",
-    "opciones": [
-      "Cerrar y volver a abrir el software de emulación de terminal.",
-      "Emitir el comando copy startup-config running-config .",
-      "Correct Response",
-      "Emitir el comando reload sin guardar la configuración en ejecución.",
-      "Borrar el archivo vlan.dat y reiniciar el dispositivo."
-    ],
-    "respuesta": 3
-  },
-  {
-    "pregunta": "Un administrador utiliza la combinación de teclas Ctrl-Mayús-6 en un switch después de emitir el comando ping . ¿Cuál es el objetivo de utilizar esta combinación de teclas? introduce la combinación de teclas Ctrl-Mayús-6. La tecla de tabulación completa el resto de los parámetros o de los argumentos de un comando. Para salir del modo de configuración y pasar al modo privilegiado, pulse las teclas Ctrl-Z. Ctrl-R vuelve a mostrar la línea que se acaba de escribir, de modo que resulta más fácil para el usuario presionar la tecla Entrar y volver a emitir el comando ping .",
-    "opciones": [
-      "Salir a un modo de configuración distinto.",
-      "Interrumpir el proceso de ping.",
-      "Permitir que el usuario complete el comando.",
-      "Reiniciar el proceso de ping."
-    ],
-    "respuesta": 1
-  },
-  {
-    "pregunta": "¿Cuál de los siguientes comandos o combinaciones de teclas le permite a un usuario regresar al nivel anterior en la jerarquía de comandos? usuario regresar al modo EXEC privilegiado. Ctrl-C permite finalizar un comando en curso. El comando exit le permite al usuario regresar al nivel anterior.",
-    "opciones": [
-      "Ctrl-Z",
-      "exit",
-      "Ctrl-C",
-      "end"
-    ],
-    "respuesta": 1
-  },
-  {
-    "pregunta": "¿Qué comando se utiliza para verificar el estado de las interfaces del switch, incluido el estado de las interfaces y una dirección IP configurada? sinopsis de la condición de las interfaces del dispositivo. El comando ipconfig se utiliza para verificar las propiedades TCP/IP en un host. El comando ping se puede utilizar para verificar la conectividad. El comando traceroute se utiliza para rastrear la ruta de acceso de red desde el origen hasta el destino.",
-    "opciones": [
-      "ipconfig",
-      "show ip interface brief",
-      "traceroute",
-      "ping"
-    ],
-    "respuesta": 1
-  },
-  {
-    "pregunta": "Se pueden usar contraseñas para restringir el acceso a todo o parte del Cisco IOS. Seleccione los modos e interfaces que se pueden proteger con contraseñas. (Elija tres). utilizando contraseñas. La administración fuera de banda del router se puede restringir en los modos EXEC del usuario y EXEC privilegiado.",
-    "opciones": [
-      "Modo EXEC privilegiado",
-      "Modo de configuración del router",
-      "Interfaz Ethemet",
-      "Interfaz VTY",
-      "Modo de arranque de IOS",
-      "Interfaz de consola"
-    ],
-    "respuesta": [0, 3, 5]
-  },
-  {
-    "pregunta": "¿En qué se diferencian SSH y Telnet? se usa para conectarse a un dispositivo mediante una conexión de consola. mensajes y solicitar la autenticación de usuarios. Telnet se considera inseguro y envía mensajes en texto sin formato. conectarse a los dispositivos mediante Telnet, se debe usar Tera Term. acceso fuera de banda. un dispositivo a través de la red porque es mucho más seguro que Telnet. Tanto SSH como Telnet se usan para conectarse a los dispositivos a través de la red y, por lo tanto, ambos se usan en banda. Se pueden usar PuTTY y Tera Term para conectarse mediante Telnet y SSH.",
-    "opciones": [
-      "SSH se debe configurar en una conexión de red activa, mientras que Telnet se usa para conectarse a un dispositivo mediante una conexión de consola.",
-      "SSH proporciona seguridad a las sesiones remotas al cifrar los mensajes y solicitar la autenticación de usuarios. Telnet se considera inseguro y envía mensajes en texto sin formato.",
-      "SSH requiere el uso del programa de emulación de terminal PuTTY. Para conectarse a los dispositivos mediante Telnet, se debe usar Tera Term.",
-      "SSH conexiones a través de la red, mientras que Telnet se usa para el acceso fuera de banda."
-    ],
-    "respuesta": 1
-  },
-  {
-    "pregunta": "¿Qué término describe una política que permite a los dispositivos de red administrar el flujo de datos para dar prioridad a la voz y el video?",
-    "opciones": [
-      "Internet",
-      "Intranet",
-      "Extranet",
-      "calidad de servicio"
-    ],
-    "respuesta": 3
-  },
-  {
-    "pregunta": "¿En qué capa OSI se agrega una dirección IP de destino a una PDU durante el proceso de encapsulación?",
-    "opciones": [
-      "Capa de presentación",
-      "Capa de red",
-      "Capa de aplicación",
-      "Capa de transporte"
-    ],
-    "respuesta": 1
-  },
-  {
-    "pregunta": "¿Cuál de las siguientes afirmaciones describe el uso de tecnología de redes por línea eléctrica? doméstica existente. para distribuir los datos por la LAN doméstica. adaptador y un tomacorriente. dispositivo a la red mediante un adaptador en cualquier tomacorriente. La red utiliza el cableado eléctrico existente para enviar datos. No reemplaza el cableado físico, pero puede agregar funcionalidad en lugares donde los puntos de acceso inalámbricos no se pueden utilizar o no pueden llegar a los dispositivos.",
-    "opciones": [
-      "Se utiliza el nuevo cableado eléctrico “inteligente” para extender una LAN doméstica existente.",
-      "Los puntos de acceso inalámbricos utilizan adaptadores de línea eléctrica para distribuir los datos por la LAN doméstica.",
-      "Una LAN doméstica se instala sin el uso de cableado físico.",
-      "Un dispositivo se conecta a una LAN doméstica existente mediante un adaptador y un tomacorriente."
-    ],
-    "respuesta": 3
-  },
-  {
-    "pregunta": "¿Cuál es la capa responsable de enrutar los mensajes en una interconexión de redes en el modelo TCP/IP? Internet y acceso a la red. De estas cuatro capas, la capa de Internet es responsable de enrutar los mensajes. La capa de sesión no forma parte del modelo TCP/IP, sino del modelo OSI.",
-    "opciones": [
-      "Acceso a la red",
-      "Internet",
-      "Transporte",
-      "Sesión"
-    ],
-    "respuesta": 1
-  },
-  {
-    "pregunta": "¿Cuál de las siguientes es una característica de los mensajes multidifusión? mensajes multidifusión están dirigidos a un grupo multidifusión específico.",
-    "opciones": [
-      "Se envían a un destino único.",
-      "Se envían a todos los hosts de una red.",
-      "Se envían a un grupo seleccionado de hosts.",
-      "Debe acusarse su recibo."
-    ],
-    "respuesta": 2
-  },
-  {
-    "pregunta": "¿Qué término describe una colección privada de LAN y WAN que pertenece a una organización?",
-    "opciones": [
-      "extranet",
-      "Intranet",
-      "Entre pares",
-      "Internet"
-    ],
-    "respuesta": 1
-  },
-  {
-    "pregunta": "¿En qué capa OSI se agrega una dirección IP de origen a una PDU durante el proceso de encapsulación?",
-    "opciones": [
-      "Capa de enlace de datos",
-      "Capa de transporte",
-      "Capa de red",
-      "Capa de aplicación"
-    ],
-    "respuesta": 2
-  },
-  {
-    "pregunta": "¿En qué capa OSI se agrega una dirección MAC de origen a una PDU durante el proceso de encapsulación?",
-    "opciones": [
-      "Capa de presentación",
-      "Capa de enlace de datos",
-      "Capa de transporte",
-      "Capa de aplicación"
-    ],
-    "respuesta": 1
-  },
-  {
-    "pregunta": "¿Qué término describe una red donde un equipo puede ser tanto cliente como servidor?",
-    "opciones": [
-      "Entre pares",
-      "calidad de servicio",
-      "nube",
-      "BYOD"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Qué término describe un tipo de red utilizada por personas que trabajan desde casa o desde una pequeña oficina remota?",
-    "opciones": [
-      "Intranet",
-      "Internet",
-      "Extranet",
-      "Red SOHO"
-    ],
-    "respuesta": 3
-  },
-  {
-    "pregunta": "¿Qué término describe una red propiedad de una organización que proporciona acceso seguro a personas que trabajan para una organización diferente?",
-    "opciones": [
-      "nube",
-      "BYOD",
-      "extranet",
-      "calidad de servicio"
-    ],
-    "respuesta": 2
-  },
-  {
-    "pregunta": "¿Qué término describe el almacenamiento de archivos personales en servidores a través de Internet para proporcionar acceso en cualquier lugar, en cualquier momento y en cualquier dispositivo?",
-    "opciones": [
-      "calidad de servicio",
-      "nube",
-      "Red convergente",
-      "BYOD"
-    ],
-    "respuesta": 1
-  },
-  {
-    "pregunta": "¿En qué capa OSI se agrega un número de puerto de origen a",
-    "opciones": [],
-    "respuesta": null
-  }
-]
-  {
-    "pregunta": "¿Qué término de capa física OSI describe el medio físico que utiliza pulsos eléctricos?",
-    "opciones": [
-      "Cable de cobre",
-      "aire",
-      "Cable de fibra óptica",
-      "goodput"
-    ],
-    "respuesta": 0
-  }
-];
+    const todasLasPreguntas = [
+      {
+        "pregunta": "¿En qué capa OSI se agrega un número de puerto de origen a una PDU durante el proceso de encapsulación?",
+        "opciones": [
+          "Capa de enlace de datos",
+          "Capa de red",
+          "Capa de transporte",
+          "Capa de aplicación"
+        ],
+        "respuesta": 2
+      },
+      {
+        "pregunta": "¿Qué término de capa física OSI describe el medio físico que utiliza pulsos eléctricos?",
+        "opciones": [
+          "Cable de cobre",
+          "aire",
+          "Cable de fibra óptica",
+          "goodput"
+        ],
+        "respuesta": 0
+      }
+      // Puedes agregar aquí más preguntas usando el mismo formato
+    ];
+
     let preguntasActuales = [];
     let puntaje = 0;
     let contestadas = 0;
@@ -688,16 +130,31 @@ const todasLasPreguntas = [
           btn.textContent = op;
           btn.onclick = () => {
             if (btn.classList.contains("correct") || btn.classList.contains("wrong")) return;
-            const esCorrecta = i === q.respuesta;
+
+            const esCorrecta = Array.isArray(q.respuesta)
+              ? q.respuesta.includes(i)
+              : i === q.respuesta;
+
             if (esCorrecta) {
               btn.classList.add("correct");
               puntaje++;
             } else {
               btn.classList.add("wrong");
+            }
+
+            // Marcar todas las correctas
+            if (Array.isArray(q.respuesta)) {
+              q.respuesta.forEach(idx => {
+                opciones.children[idx].classList.add("correct");
+              });
+            } else {
               opciones.children[q.respuesta].classList.add("correct");
             }
+
             contestadas++;
-            if (contestadas === 10) mostrarResultado();
+            if (contestadas === preguntasActuales.length) {
+              mostrarResultado();
+            }
           };
           opciones.appendChild(btn);
         });
@@ -709,7 +166,7 @@ const todasLasPreguntas = [
 
     function mostrarResultado() {
       const resultadoDiv = document.getElementById("resultado");
-      resultadoDiv.textContent = `Tu puntaje: ${puntaje} / 10`;
+      resultadoDiv.textContent = `Tu puntaje: ${puntaje} / ${preguntasActuales.length}`;
       document.getElementById("reiniciar").style.display = "block";
     }
 
@@ -723,5 +180,4 @@ const todasLasPreguntas = [
   </script>
 </body>
 </html>
-
 
