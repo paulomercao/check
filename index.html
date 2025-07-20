@@ -72,6 +72,7 @@
   <button id="reiniciar" style="display:none">Reiniciar</button>
   <script>
 const todasLasPreguntas = [
+  [
   {
     "pregunta": "Un empleado de una sucursal está realizando una cotización para un cliente. Para ello, necesita acceder a la información confidencial sobre precios que se encuentra en los servidores internos de la oficina central. ¿A qué tipo de red debería acceder el empleado? LAN y WAN que pertenecen a una organización. Una intranet está diseñada para que solo puedan acceder a ella los miembros y empleados de la organización, u otras personas autorizadas.",
     "opciones": [
@@ -80,7 +81,7 @@ const todasLasPreguntas = [
       "Una red de área local",
       "Una extranet"
     ],
-    "respuesta": 0
+    "respuesta": 1
   },
   {
     "pregunta": "¿Cuáles son los dos criterios que se utilizan para seleccionar un medio de red entre varios medios de red? (Elija dos opciones). correctamente seleccionado puede transportar correctamente una señal, el entorno en el que se debe instalar el medio seleccionado, la cantidad de datos y la velocidad a la que los datos se deben transmitir, y el costo del medio y de su instalación.",
@@ -91,7 +92,7 @@ const todasLasPreguntas = [
       "El entorno en el que se debe instalar el medio seleccionado",
       "Los tipos de datos que se deben priorizar"
     ],
-    "respuesta": 0
+    "respuesta": [0, 3]
   },
   {
     "pregunta": "Un usuario está implementando una política de seguridad en una red de oficina pequeña. ¿Cuáles son las dos acciones que proporcionarían los requisitos mínimos de seguridad para esta red? Elija dos opciones. de prevención y de detección de intrusiones, se asocian con las redes empresariales en lugar de las redes domésticas. Normalmente, la instalación de un software antivirus y antimalware, y la implementación de un firewall son los requisitos mínimos para las redes domésticas. La instalación de una red inalámbrica doméstica no mejora la seguridad de la red, y requiere tomar medidas de seguridad adicionales.",
@@ -102,7 +103,7 @@ const todasLasPreguntas = [
       "El agregado de un dispositivo de prevención de intrusiones exclusivo",
       "La instalación de un software antivirus"
     ],
-    "respuesta": 0
+    "respuesta": [2, 4]
   },
   {
     "pregunta": "¿Cuál de estas interfaces permite la administración remota de un switch de capa 2? switch virtual interface) que proporciona un medio para administrar el dispositivo de manera remota.",
@@ -112,7 +113,7 @@ const todasLasPreguntas = [
       "La interfaz virtual del switch",
       "La interfaz auxiliar"
     ],
-    "respuesta": 0
+    "respuesta": 2
   },
   {
     "pregunta": "¿Qué función tiene la tecla de tabulación al introducir un comando en IOS? un comando, IOS completa el resto del comando.",
@@ -122,7 +123,7 @@ const todasLasPreguntas = [
       "Anula el comando actual y vuelve al modo de configuración.",
       "Sale del modo de configuración y vuelve al modo EXEC del usuario."
     ],
-    "respuesta": 0
+    "respuesta": 1
   },
   {
     "pregunta": "Consulte la ilustración. Un administrador de redes está configurando el control de acceso al switch SW1. Si el administrador utiliza una conexión de consola para conectarse al switch, ¿cuál de las siguientes contraseñas se necesita para acceder al modo EXEC del usuario? Examen básico de conectividad de red y comunicaciones configurada con el comando line VTY . Para acceder al modo EXEC del usuario, se requiere la contraseña configurada aquí. Para obtener acceso a través del puerto de consola, se requiere la contraseña configurada con el comando line console 0 , y la contraseña de enable y la contraseña secreta de enable se utilizan para otorgar acceso al modo EXEC privilegiado.",
@@ -132,7 +133,7 @@ const todasLasPreguntas = [
       "lineconin",
       "linevtyin"
     ],
-    "respuesta": 0
+    "respuesta": 2
   },
   {
     "pregunta": "Un técnico configura un switch con los siguientes comandos: SwitchA(config)# interface vlan 1 SwitchA(config-if)# ip address 192.168.1.1 255.255.255.0 SwitchA(config-if)# no shutdown ¿Qué configura el técnico? interfaz virtual de switch. Esto permite que el switch se pueda administrar de forma remota en la red.",
@@ -142,18 +143,18 @@ const todasLasPreguntas = [
       "Acceso por Telnet",
       "SVI"
     ],
-    "respuesta": 0
+    "respuesta": 3
   },
   {
     "pregunta": "¿Cuáles de las siguientes son dos características de la RAM en un dispositivo Cisco? Elija dos opciones. dispositivo. configuración. Cisco. se almacena en la RAM. operaciones de red. La configuración en ejecución se almacena en la RAM. Este tipo de memoria se considera memoria volátil porque los datos se pierden al apagar y volver a encender. La memoria flash almacena IOS y envía una copia de este sistema a la RAM cuando se enciende un dispositivo. La memoria flash es no volátil porque retiene el contenido almacenado durante una pérdida de alimentación.",
     "opciones": [
-      "El contenido de la RAM se pierde al apagar y volver a encender el",
-      "La RAM puede almacenar varias versiones de IOS y de archivos de",
+      "El contenido de la RAM se pierde al apagar y volver a encender el dispositivo.",
+      "La RAM puede almacenar varias versiones de IOS y de archivos de configuración.",
       "La RAM proporciona almacenamiento no volátil.",
-      "La RAM es un componente de los switches Cisco, pero no de los routers",
-      "La configuración que está activamente en ejecución en el dispositivo"
+      "La RAM es un componente de los switches Cisco, pero no de los routers Cisco.",
+      "La configuración que está activamente en ejecución en el dispositivo se almacena en la RAM."
     ],
-    "respuesta": 0
+    "respuesta": [0, 4]
   },
   {
     "pregunta": "¿Cuáles son los dos nombres de host que cumplen las pautas de convenciones de nomenclatura en dispositivos con Cisco IOS? Elija dos opciones. deben cumplir los siguientes criterios: Comenzar con una letra. No contener espacios. Finalizar con una letra o dígito. Utilizar únicamente letras, dígitos y guiones. Tener menos de 64 caracteres de longitud.",
@@ -164,19 +165,19 @@ const todasLasPreguntas = [
       "HO Floor 17",
       "RM-3-Switch-2A4"
     ],
-    "respuesta": 0
+    "respuesta": [1, 4]
   },
   {
     "pregunta": "¿Cuáles de las siguientes son tres características de una SVI? Elija tres opciones. medios. cualquier ubicación. del switch. SVI se crean en el software dado que no hay hardware físico asociado a ellas. Estas interfaces proporcionan un medio para administrar un switch de manera remota en una red que utiliza IP. Cada switch viene con una SVI que aparece en la configuración predeterminada inicial. La SVI predeterminada es la VLAN 1.",
     "opciones": [
       "Proporciona una forma de administrar un switch de manera remota.",
-      "Es una interfaz especial que permite la conectividad de diferentes tipos de",
+      "Es una interfaz especial que permite la conectividad de diferentes tipos de medios.",
       "No está asociada a ninguna interfaz física en un switch.",
       "Está asociada con la VLAN 1 de manera predeterminada.",
-      "Se requiere para permitir la conectividad de cualquier dispositivo en",
-      "Está diseñada como un protocolo de seguridad para proteger los puertos"
+      "Se requiere para permitir la conectividad de cualquier dispositivo en cualquier ubicación.",
+      "Está diseñada como un protocolo de seguridad para proteger los puertos del switch."
     ],
-    "respuesta": 0
+    "respuesta": [0, 2, 3]
   },
   {
     "pregunta": "Una la descripción con el modo de IOS relacionado. (No se utilizan todas las opciones). Introduction to Networks (Versión 7.00) – Examen básico de conectividad de red y comunicacionesModo EXEC del usuario: Modo EXEC privilegiado Modo de configuración global dispositivo.",
@@ -185,10 +186,14 @@ const todasLasPreguntas = [
       "Es la primera entrada a la CLI de un dispositivo IOS.",
       "Se accede mediante la introducción del comando enable.",
       "Se identifica con una petición de entrada que termina con el carácter #.",
-      "Los cambios que se realizan afectan el funcionamiento global del",
+      "Los cambios que se realizan afectan el funcionamiento global del dispositivo.",
       "Se accede mediante la introducción del comando configure terminal."
     ],
-    "respuesta": 0
+    "respuesta": [
+      {"modo EXEC del usuario": [0, 1]},
+      {"Modo EXEC privilegiado": [2, 3]},
+      {"Modo de configuración global": [4, 5]}
+    ]
   },
   {
     "pregunta": "En el comando show running-config , ¿qué parte de la sintaxis está representada por running-config ? parte de la sintaxis, running-config, es la palabra clave. La palabra clave especifica lo que debe mostrarse como resultado del comando show .",
@@ -198,17 +203,17 @@ const todasLasPreguntas = [
       "el comando",
       "una palabra clave"
     ],
-    "respuesta": 2
+    "respuesta": 3
   },
   {
     "pregunta": "Después de realizar cambios de configuración en un switch Cisco, un administrador de redes emite el comando copy running-config startup-config . ¿Qué sucede al emitir este comando? recientemente. original. configuración operativa actual reemplaza el archivo de configuración de inicio almacenado en la NVRAM. El archivo de configuración guardado en la NVRAM se carga cuando se reinicia el dispositivo.",
     "opciones": [
       "La nueva configuración se almacena en la memoria flash.",
       "Si se reinicia el switch, se carga la nueva configuración.",
-      "El archivo de IOS actual se reemplaza por el archivo configurado",
-      "Se eliminan los cambios de configuración y se restaura la configuración"
+      "El archivo de IOS actual se reemplaza por el archivo configurado recientemente.",
+      "Se eliminan los cambios de configuración y se restaura la configuración original."
     ],
-    "respuesta": 0
+    "respuesta": 1
   },
   {
     "pregunta": "¿Qué comando evita que todas las contraseñas sin encriptar se muestren como texto no cifrado en un archivo de configuración? texto no cifrado en los archivos de configuración, el administrador puede ejecutar el comando service password-encryption . Este comando encripta todas las contraseñas configuradas en el archivo de configuración.",
@@ -219,18 +224,18 @@ const todasLasPreguntas = [
       "(config)# enable secret Encrypted_Password",
       "(config)# service password-encryption"
     ],
-    "respuesta": 0
+    "respuesta": 4
   },
   {
     "pregunta": "Un administrador de red ingresa el comando service password- encryption en el modo de configuración de un router. ¿Qué logra este comando? configuración que se almacenan actualmente en NVRAM. configuración en ejecución. personal de servicio externo que debe realizar el mantenimiento del enrutador. enable secret password . vínculos WAN serie. contraseñas en texto no cifrado. Utilice el comando de global config service password-encryption para cifrar todas las contraseñas.",
     "opciones": [
-      "Este comando cifra automáticamente las contraseñas en los archivos de",
-      "Este comando impide que alguien vea las contraseñas de",
-      "Este comando proporciona una contraseña cifrada exclusiva para el",
-      "Este comando habilita un algoritmo de cifrado seguro para el comando",
-      "Este comando cifra las contraseñas a medida que se transmiten a través de"
+      "Este comando cifra automáticamente las contraseñas en los archivos de configuración que se almacenan actualmente en NVRAM.",
+      "Este comando impide que alguien vea las contraseñas de configuración en ejecución.",
+      "Este comando proporciona una contraseña cifrada exclusiva para el personal de servicio externo que debe realizar el mantenimiento del enrutador.",
+      "Este comando habilita un algoritmo de cifrado seguro para el comando enable secret password .",
+      "Este comando cifra las contraseñas a medida que se transmiten a través de vínculos WAN serie."
     ],
-    "respuesta": 0
+    "respuesta": 1
   },
   {
     "pregunta": "¿Cuál de estos métodos pueden utilizar dos PC para asegurar que no se descarten los paquetes debido a que se envían demasiados datos demasiado rápido? mecanismo que permita que el origen y el destino establezcan el intervalo de la transmisión y la recepción de datos. El control del flujo permite esto al asegurar que los datos no se envíen demasiado rápido a fin de que se reciban correctamente.",
@@ -240,17 +245,17 @@ const todasLasPreguntas = [
       "Control del flujo",
       "Encapsulación"
     ],
-    "respuesta": 0
+    "respuesta": 2
   },
   {
     "pregunta": "¿Cuál de estas afirmaciones describe de forma precisa un proceso de encapsulación TCP/IP cuando una PC envía datos a la red? transporte. Internet. envía segmentos a la capa de Internet. La capa de Internet envía los paquetes a la capa de acceso a la red, que genera tramas y luego las convierte en bits. Los bits se liberan en los medios de red.",
     "opciones": [
-      "Los paquetes se envían de la capa de acceso a la red a la capa de",
-      "Los segmentos se envían de la capa de transporte a la capa de",
+      "Los paquetes se envían de la capa de acceso a la red a la capa de transporte.",
+      "Los segmentos se envían de la capa de transporte a la capa de Internet.",
       "Las tramas se envían de la capa de acceso a la red a la capa de Internet.",
       "Los datos se envían de la capa de Internet a la capa de acceso a la red."
     ],
-    "respuesta": 0
+    "respuesta": 1
   },
   {
     "pregunta": "¿Qué tres protocolos de la capa de aplicación forman parte del paquete del protocolo TCP/IP? Elija tres opciones. del protocolo TCP/IP. ARP y PPP son protocolos de la capa de acceso a la red, y NAT es un protocolo de la capa de Internet del paquete del protocolo TCP/IP.",
@@ -262,7 +267,7 @@ const todasLasPreguntas = [
       "DHCP",
       "DNS"
     ],
-    "respuesta": 5
+    "respuesta": [1, 4, 5]
   },
   {
     "pregunta": "¿Qué nombre se le asigna a la PDU de la capa de transporte? por los medios de la red. Durante el proceso, varios protocolos le agregan información en cada nivel. En cada etapa del proceso, una unidad de datos de protocolo (PDU) tiene un nombre distinto para reflejar sus nuevas funciones. Las PDU se nombran según los protocolos del paquete TCP/IP: Datos: término general para la PDU que se utiliza en la capa de aplicación Segmento: PDU de la capa de transporte Paquete: PDU de la capa de red Trama: PDU de la capa de enlace de datos Bits: PDU de la capa física que se utiliza cuando se transmiten datos físicamente por el medio",
@@ -273,7 +278,7 @@ const todasLasPreguntas = [
       "bits",
       "datos"
     ],
-    "respuesta": 4
+    "respuesta": 2
   },
   {
     "pregunta": "Cuando el direccionamiento IPv4 se configura manualmente en un servidor web, ¿cuál es la propiedad de la configuración IPv4 que identifica las porciones de red y de host de una dirección IPv4? componentes: Dirección IPv4: identifica de manera única una terminal en la red. Máscara de subred: determina la porción de dirección de red y la porción de host para una dirección IPv4. Gateway predeterminado: es la dirección IP de la interfaz de router utilizada para la comunicación con hosts de otra red. Dirección del servidor DNS: es la dirección IP del servidor del sistema de nombres de dominio (DNS). En las terminales, la dirección del servidor DHCP (si se utiliza) no se configura manualmente. La proporciona un servidor DHCP cuando una terminal solicita una dirección IP.",
@@ -283,7 +288,7 @@ const todasLasPreguntas = [
       "Gateway predeterminado",
       "Dirección del servidor DNS"
     ],
-    "respuesta": 0
+    "respuesta": 1
   },
   {
     "pregunta": "¿Qué proceso implica colocar una PDU dentro de otra PDU? como encapsulación. En las redes, la encapsulación tiene lugar cuando una unidad de datos de protocolo se transporta dentro del campo de datos de la siguiente unidad de datos de protocolo inferior.",
@@ -308,14 +313,14 @@ const todasLasPreguntas = [
   {
     "pregunta": "Observe la ilustración. El ServidorB está intentando ponerse en contacto con HostA. ¿Qué dos instrucciones identifican correctamente el direccionamiento que ServidorB generará en el proceso? (Escoja dos opciones). Módulos 1 – 3 Examen de conectividad de red básica y comunicaciones Q26 HostA. RouterB. SwitchB. contiene la dirección IP del dispositivo de destino en la red remota y una trama que contiene la dirección MAC del dispositivo de puerta de enlace predeterminado en la red local.",
     "opciones": [
-      "ServidorB generará un paquete con la dirección IP de destino de",
-      "ServidorB generará una trama con la dirección MAC de destino del",
+      "ServidorB generará un paquete con la dirección IP de destino de HostA.",
+      "ServidorB generará una trama con la dirección MAC de destino del RouterB.",
       "ServidorB generará un paquete con la dirección IP de destino de RouterA.",
-      "ServidorB generará una trama con la dirección MAC de destino del",
+      "ServidorB generará una trama con la dirección MAC de destino del SwitchB.",
       "ServidorB generará una trama con la dirección MAC de destino de RouterA.",
       "ServidorB generará un paquete con la dirección IP de destino del RouterB."
     ],
-    "respuesta": 0
+    "respuesta": [0, 1]
   },
   {
     "pregunta": "Un cliente Web está recibiendo una respuesta para una página Web de un servidor Web. Desde la perspectiva del cliente, ¿cuál es el orden correcto de la pila de protocolos que se usa para decodificar la transmisión recibida?",
@@ -336,7 +341,7 @@ const todasLasPreguntas = [
       "Física",
       "Red"
     ],
-    "respuesta": 0
+    "respuesta": [0, 4]
   },
   {
     "pregunta": "¿En cuál de estas capas del modelo OSI se agregaría una dirección lógica durante el encapsulamiento? agregan en la capa de red. Las direcciones físicas se agregan en la capa de enlace de datos. Las direcciones de puertos se agregan en la capa de transporte. En la capa física, no se agregan direcciones.",
@@ -356,7 +361,7 @@ const todasLasPreguntas = [
       "Un router",
       "Un firewall"
     ],
-    "respuesta": 0
+    "respuesta": 2
   },
   {
     "pregunta": "Abra la actividad de PT. Complete las instrucciones de la actividad y luego responda las pregunta. Módulos 1 – 3: Examen de conectividad de red básica y comunicaciones Q29¿Cual es la dirección IP de la interfaz virtual del switch (SVI), en el Switch0? configuration o el comando show ip interfaces brief mostrarán la dirección IP de la interfaz virtual del switch (SVI).",
@@ -372,17 +377,17 @@ const todasLasPreguntas = [
     "pregunta": "¿Por qué un switch de capa 2 necesitaría una dirección IP? conectadas. predeterminado. para transmitir tramas a los dispositivos conectados. Sin embargo, cuando se accede a un switch de forma remota a través de la red, debe tener una dirección de capa 3. La dirección IP se debe aplicar a una interfaz virtual, no a una interfaz física. Son los routers, no los switches, los que funcionan como gateways predeterminados.",
     "opciones": [
       "Para habilitar el switch de modo que se administre de forma remota.",
-      "Para habilitar el switch para que envíe tramas de broadcast a las PC",
+      "Para habilitar el switch para que envíe tramas de broadcast a las PC conectadas.",
       "Para habilitar el switch para que reciba tramas de las PC conectadas.",
-      "Para habilitar el switch para que funcione como un gateway"
+      "Para habilitar el switch para que funcione como un gateway predeterminado."
     ],
     "respuesta": 0
   },
   {
     "pregunta": "Consulte la ilustración. Un administrador intenta configurar el switch pero recibe el mensaje de error que se muestra en la ilustración. ¿Cuál es el problema? antes de emitir el comando. acceder al modo de configuración global. comando configure terminal o una versión abreviada, como config t , desde el modo EXEC privilegiado. En esta situación, el administrador está en el modo EXEC del usuario, según lo indica el símbolo > después del nombre de host. El administrador debe utilizar el comando enable para pasar al modo EXEC privilegiado antes de introducir el comando configure terminal .",
     "opciones": [
-      "El administrador primero debe ingresar al modo EXEC privilegiado",
-      "El administrador se debe conectar a través del puerto de consola para",
+      "El administrador primero debe ingresar al modo EXEC privilegiado antes de emitir el comando.",
+      "El administrador se debe conectar a través del puerto de consola para acceder al modo de configuración global.",
       "El administrador ya se encuentra en el modo de configuración global.",
       "Se debe utilizar el comando completo configure terminal ."
     ],
@@ -396,7 +401,7 @@ const todasLasPreguntas = [
       "Extranet",
       "Internet"
     ],
-    "respuesta": 0
+    "respuesta": 1
   },
   {
     "pregunta": "¿En qué capa OSI se agrega un número de puerto de destino a una PDU durante el proceso de encapsulación?",
@@ -406,7 +411,7 @@ const todasLasPreguntas = [
       "Capa de transporte",
       "Capa de aplicación"
     ],
-    "respuesta": 0
+    "respuesta": 2
   },
   {
     "pregunta": "¿Qué tipo de tráfico de red requiere QoS?",
@@ -416,14 +421,14 @@ const todasLasPreguntas = [
       "Wiki",
       "Correo electrónico"
     ],
-    "respuesta": 0
+    "respuesta": 1
   },
   {
     "pregunta": "¿Cuál de las siguientes es una ventaja de que los dispositivos de red utilicen protocolos de estándar abierto? pueden intercambiar datos correctamente. dispositivos del mismo proveedor. estándar abierto, como la suite TCP/IP, es que los clientes y los servidores que ejecutan diferentes sistemas operativos pueden comunicarse entre sí. Los protocolos de estándar abierto facilitan la innovación y la competencia entre los proveedores y a través de los mercados, y pueden reducir la aparición de monopolios en los mercados de la industria de redes.",
     "opciones": [
-      "Un host cliente y un servidor con distintos sistemas operativos",
+      "Un host cliente y un servidor con distintos sistemas operativos pueden intercambiar datos correctamente.",
       "La competencia y la innovación se limitan a tipos específicos de productos.",
-      "Las comunicaciones de red se limitan a transferencias de datos entre",
+      "Las comunicaciones de red se limitan a transferencias de datos entre dispositivos del mismo proveedor.",
       "Un único ISP en cada mercado puede controlar el acceso a Internet."
     ],
     "respuesta": 0
@@ -437,7 +442,7 @@ const todasLasPreguntas = [
       "Calidad de servicio (QoS)",
       "Tolerancia a fallas"
     ],
-    "respuesta": 0
+    "respuesta": 1
   },
   {
     "pregunta": "¿Qué método permite que un equipo reaccione en consecuencia cuando solicita datos de un servidor y el servidor tarda demasiado en responder? antes de un tiempo aceptable, la computadora supone que no habrá ninguna respuesta y reacciona en consecuencia.",
@@ -447,7 +452,7 @@ const todasLasPreguntas = [
       "Encapsulamiento",
       "Control del flujo"
     ],
-    "respuesta": 0
+    "respuesta": 1
   },
   {
     "pregunta": "Al intentar solucionar un problema de red, un técnico realizó varios cambios al archivo de configuración del router actual. Los cambios no solucionaron el problema y no se guardaron. ¿Qué puede hacer el técnico para descartar los cambios y trabajar con el archivo en la NVRAM? cambios que se realizaron al archivo de configuración en ejecución. La solución es reiniciar el router sin guardar la configuración en ejecución. El comando copy startup-config running-config no sobrescribe el archivo de configuración en ejecución con el archivo de configuración almacenado en la NVRAM, sino que, simplemente, tiene un efecto aditivo.",
@@ -458,7 +463,7 @@ const todasLasPreguntas = [
       "Emitir el comando reload sin guardar la configuración en ejecución.",
       "Borrar el archivo vlan.dat y reiniciar el dispositivo."
     ],
-    "respuesta": 0
+    "respuesta": 3
   },
   {
     "pregunta": "Un administrador utiliza la combinación de teclas Ctrl-Mayús-6 en un switch después de emitir el comando ping . ¿Cuál es el objetivo de utilizar esta combinación de teclas? introduce la combinación de teclas Ctrl-Mayús-6. La tecla de tabulación completa el resto de los parámetros o de los argumentos de un comando. Para salir del modo de configuración y pasar al modo privilegiado, pulse las teclas Ctrl-Z. Ctrl-R vuelve a mostrar la línea que se acaba de escribir, de modo que resulta más fácil para el usuario presionar la tecla Entrar y volver a emitir el comando ping .",
@@ -468,7 +473,7 @@ const todasLasPreguntas = [
       "Permitir que el usuario complete el comando.",
       "Reiniciar el proceso de ping."
     ],
-    "respuesta": 0
+    "respuesta": 1
   },
   {
     "pregunta": "¿Cuál de los siguientes comandos o combinaciones de teclas le permite a un usuario regresar al nivel anterior en la jerarquía de comandos? usuario regresar al modo EXEC privilegiado. Ctrl-C permite finalizar un comando en curso. El comando exit le permite al usuario regresar al nivel anterior.",
@@ -478,7 +483,7 @@ const todasLasPreguntas = [
       "Ctrl-C",
       "end"
     ],
-    "respuesta": 3
+    "respuesta": 1
   },
   {
     "pregunta": "¿Qué comando se utiliza para verificar el estado de las interfaces del switch, incluido el estado de las interfaces y una dirección IP configurada? sinopsis de la condición de las interfaces del dispositivo. El comando ipconfig se utiliza para verificar las propiedades TCP/IP en un host. El comando ping se puede utilizar para verificar la conectividad. El comando traceroute se utiliza para rastrear la ruta de acceso de red desde el origen hasta el destino.",
@@ -500,17 +505,17 @@ const todasLasPreguntas = [
       "Modo de arranque de IOS",
       "Interfaz de consola"
     ],
-    "respuesta": 0
+    "respuesta": [0, 3, 5]
   },
   {
     "pregunta": "¿En qué se diferencian SSH y Telnet? se usa para conectarse a un dispositivo mediante una conexión de consola. mensajes y solicitar la autenticación de usuarios. Telnet se considera inseguro y envía mensajes en texto sin formato. conectarse a los dispositivos mediante Telnet, se debe usar Tera Term. acceso fuera de banda. un dispositivo a través de la red porque es mucho más seguro que Telnet. Tanto SSH como Telnet se usan para conectarse a los dispositivos a través de la red y, por lo tanto, ambos se usan en banda. Se pueden usar PuTTY y Tera Term para conectarse mediante Telnet y SSH.",
     "opciones": [
-      "SSH se debe configurar en una conexión de red activa, mientras que Telnet",
-      "SSH proporciona seguridad a las sesiones remotas al cifrar los",
-      "SSH requiere el uso del programa de emulación de terminal PuTTY. Para",
-      "SSH conexiones a través de la red, mientras que Telnet se usa para el"
+      "SSH se debe configurar en una conexión de red activa, mientras que Telnet se usa para conectarse a un dispositivo mediante una conexión de consola.",
+      "SSH proporciona seguridad a las sesiones remotas al cifrar los mensajes y solicitar la autenticación de usuarios. Telnet se considera inseguro y envía mensajes en texto sin formato.",
+      "SSH requiere el uso del programa de emulación de terminal PuTTY. Para conectarse a los dispositivos mediante Telnet, se debe usar Tera Term.",
+      "SSH conexiones a través de la red, mientras que Telnet se usa para el acceso fuera de banda."
     ],
-    "respuesta": 0
+    "respuesta": 1
   },
   {
     "pregunta": "¿Qué término describe una política que permite a los dispositivos de red administrar el flujo de datos para dar prioridad a la voz y el video?",
@@ -520,7 +525,7 @@ const todasLasPreguntas = [
       "Extranet",
       "calidad de servicio"
     ],
-    "respuesta": 0
+    "respuesta": 3
   },
   {
     "pregunta": "¿En qué capa OSI se agrega una dirección IP de destino a una PDU durante el proceso de encapsulación?",
@@ -530,17 +535,17 @@ const todasLasPreguntas = [
       "Capa de aplicación",
       "Capa de transporte"
     ],
-    "respuesta": 0
+    "respuesta": 1
   },
   {
     "pregunta": "¿Cuál de las siguientes afirmaciones describe el uso de tecnología de redes por línea eléctrica? doméstica existente. para distribuir los datos por la LAN doméstica. adaptador y un tomacorriente. dispositivo a la red mediante un adaptador en cualquier tomacorriente. La red utiliza el cableado eléctrico existente para enviar datos. No reemplaza el cableado físico, pero puede agregar funcionalidad en lugares donde los puntos de acceso inalámbricos no se pueden utilizar o no pueden llegar a los dispositivos.",
     "opciones": [
-      "Se utiliza el nuevo cableado eléctrico “inteligente” para extender una LAN",
-      "Los puntos de acceso inalámbricos utilizan adaptadores de línea eléctrica",
+      "Se utiliza el nuevo cableado eléctrico “inteligente” para extender una LAN doméstica existente.",
+      "Los puntos de acceso inalámbricos utilizan adaptadores de línea eléctrica para distribuir los datos por la LAN doméstica.",
       "Una LAN doméstica se instala sin el uso de cableado físico.",
-      "Un dispositivo se conecta a una LAN doméstica existente mediante un"
+      "Un dispositivo se conecta a una LAN doméstica existente mediante un adaptador y un tomacorriente."
     ],
-    "respuesta": 0
+    "respuesta": 3
   },
   {
     "pregunta": "¿Cuál es la capa responsable de enrutar los mensajes en una interconexión de redes en el modelo TCP/IP? Internet y acceso a la red. De estas cuatro capas, la capa de Internet es responsable de enrutar los mensajes. La capa de sesión no forma parte del modelo TCP/IP, sino del modelo OSI.",
@@ -550,7 +555,7 @@ const todasLasPreguntas = [
       "Transporte",
       "Sesión"
     ],
-    "respuesta": 0
+    "respuesta": 1
   },
   {
     "pregunta": "¿Cuál de las siguientes es una característica de los mensajes multidifusión? mensajes multidifusión están dirigidos a un grupo multidifusión específico.",
@@ -560,7 +565,7 @@ const todasLasPreguntas = [
       "Se envían a un grupo seleccionado de hosts.",
       "Debe acusarse su recibo."
     ],
-    "respuesta": 0
+    "respuesta": 2
   },
   {
     "pregunta": "¿Qué término describe una colección privada de LAN y WAN que pertenece a una organización?",
@@ -570,7 +575,7 @@ const todasLasPreguntas = [
       "Entre pares",
       "Internet"
     ],
-    "respuesta": 0
+    "respuesta": 1
   },
   {
     "pregunta": "¿En qué capa OSI se agrega una dirección IP de origen a una PDU durante el proceso de encapsulación?",
@@ -580,7 +585,7 @@ const todasLasPreguntas = [
       "Capa de red",
       "Capa de aplicación"
     ],
-    "respuesta": 0
+    "respuesta": 2
   },
   {
     "pregunta": "¿En qué capa OSI se agrega una dirección MAC de origen a una PDU durante el proceso de encapsulación?",
@@ -590,7 +595,7 @@ const todasLasPreguntas = [
       "Capa de transporte",
       "Capa de aplicación"
     ],
-    "respuesta": 0
+    "respuesta": 1
   },
   {
     "pregunta": "¿Qué término describe una red donde un equipo puede ser tanto cliente como servidor?",
@@ -610,7 +615,7 @@ const todasLasPreguntas = [
       "Extranet",
       "Red SOHO"
     ],
-    "respuesta": 0
+    "respuesta": 3
   },
   {
     "pregunta": "¿Qué término describe una red propiedad de una organización que proporciona acceso seguro a personas que trabajan para una organización diferente?",
@@ -620,7 +625,7 @@ const todasLasPreguntas = [
       "extranet",
       "calidad de servicio"
     ],
-    "respuesta": 0
+    "respuesta": 2
   },
   {
     "pregunta": "¿Qué término describe el almacenamiento de archivos personales en servidores a través de Internet para proporcionar acceso en cualquier lugar, en cualquier momento y en cualquier dispositivo?",
@@ -630,703 +635,14 @@ const todasLasPreguntas = [
       "Red convergente",
       "BYOD"
     ],
-    "respuesta": 0
+    "respuesta": 1
   },
   {
-    "pregunta": "¿En qué capa OSI se agrega un número de puerto de origen a una PDU durante el proceso de encapsulación ?",
-    "opciones": [
-      "Capa de transporte",
-      "Capa de red",
-      "Capa de aplicación",
-      "Capa de enlace de datos"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Cuál de estas afirmaciones sobre los protocolos de red es correcta? en que se monta en bastidores. destino. redes remotas. ambos. Estos interactúan entre sí dentro de las distintas capas de un stack de protocolos. Los protocolos no tienen nada que ver con la instalación del equipo de red. Los protocolos de red son necesarios para intercambiar información entre los dispositivos de origen y de destino tanto en redes locales como remotas.",
-    "opciones": [
-      "Los protocolos de red definen el tipo de hardware que se utiliza y la forma",
-      "Definen cómo se intercambian los mensajes entre el origen y el",
-      "Solo se requieren para el intercambio de mensajes entre dispositivos de",
-      "Todos funcionan en la capa de acceso a la red de TCP/IP."
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿En qué capa OSI se agregan datos a una PDU durante el proceso de encapsulación?",
-    "opciones": [
-      "Capa de aplicación",
-      "Capa de red",
-      "Capa de presentación",
-      "Capa de transporte"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Qué dirección lógica se utiliza para la entrega de datos a una red remota?",
-    "opciones": [
-      "La dirección MAC de destino",
-      "La dirección IP de destino",
-      "El número de puerto de destino",
-      "La dirección MAC de origen",
-      "La dirección IP de origen"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Qué término describe la capacidad de usar dispositivos personales en una red empresarial o de campus?",
-    "opciones": [
-      "Internet",
-      "Intranet",
-      "BYOD",
-      "Extranet"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Que termino describe una tecnología que permite que los dispositivos se conecten a LAN usando una toma de corriente?",
-    "opciones": [
-      "Intranet",
-      "Redes por linea electrica",
-      "Extranet",
-      "Internet",
-      "Es más caro que el cable UTP.",
-      "Combina las técnicas de anulación, protección y trenzado para proteger los",
-      "No lo afectan la EMI ni la RFI.",
-      "Cada par de cables se encuentra envuelto en papel metálico.",
-      "Típicamente, contiene cuatro pares de hilos de fibra óptica."
-    ],
-    "respuesta": 4
-  },
-  {
-    "pregunta": "Con el uso del cable de cobre de par trenzado sin blindaje en una red, ¿qué causa croostalk dentro de los pares de cables? simultáneamente transmisión de la señal en un cable interfiere con otro cable. Cuando la corriente fluye a través de un cable, se produce un campo magnético. El campo magnético producido interconectará la señal transportada en el cable adyacente.",
-    "opciones": [
-      "el uso de alambre trenzado para proteger los pares de cables adyacentes",
-      "el campo magnético alrededor de los pares adyacentes de alambre",
-      "la colisión causada por dos nodos que intentan usar los medios",
-      "el reflejo de la onda eléctrica de vuelta desde el extremo lejano del cable"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "Consulte el gráfico. ¿Qué tipo de cableado se muestra? Módulos 4 – 7 Preguntas y Respuestas Español 6 Consta de cuatro pares de hilos codificados por colores que están trenzados entre sí y recubiertos con un revestimiento de plástico flexible. STP utiliza cuatro pares de hilos. Cada uno de estos pares está empaquetado primero con un blindaje de hoja metálica y, luego, el conjunto se empaqueta con una malla tejida o una hoja metálica. El cable coaxial utiliza un conductor de cobre y una capa de aislamiento plástico flexible rodea el conductor de cobre. El cable de fibra es una un vidrio flexible, extremadamente delgado y transparente rodeada de aislamiento de plástico.",
-    "opciones": [
-      "Coaxial",
-      "Fibra",
-      "UTP",
-      "STP"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "Además de la longitud del cable, ¿cuáles son los otros dos factores que podrían interferir en la comunicación por cables UTP? Elija dos opciones. comunicaciones de red. Sin embargo, estos medios están limitados por la distancia y la interferencia de señal. Los datos se transmiten por cables de cobre como impulsos eléctricos, que son susceptibles a la interferencia de dos orígenes: Interferencia electromagnética (EMI) o interferencia de radiofrecuencia (RFI): las señales de EMI y RFI pueden distorsionar y dañar las señales de datos que transportan los medios de cobre. Crosstalk: se trata de una perturbación causada por los campos eléctricos o magnéticos de una señal de un hilo a la señal de un hilo adyacente.",
-    "opciones": [
-      "Interferencia electromagnética",
-      "Tamaño de la red",
-      "Ancho de banda",
-      "Crosstalk",
-      "Técnica de modulación de señal"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "Consulte el gráfico. ¿Qué tipo de cableado se muestra? UTP Consta de cuatro pares de hilos codificados por colores que están trenzados entre sí y recubiertos con un revestimiento de plástico flexible. STP utiliza cuatro pares de hilos. Cada uno de estos pares está empaquetado primero con un blindaje de hoja metálica y, luego, el conjunto se empaqueta con una malla tejida o una hoja metálica. El cable coaxial utiliza un conductor de cobre y una capa de aislamiento plástico flexible rodea el conductor de cobre. El cable de fibra es un vidrio flexible, extremadamente delgado y transparente rodeada de aislamiento de plástico.",
-    "opciones": [
-      "Fibra",
-      "Coaxial",
-      "UTP",
-      "STP"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Cuáles son los dos dispositivos que comúnmente afectan las redes inalámbricas? (Elija dos opciones). es la interferencia causada por los trasmisores de radio y otros dispositivos que transmiten la misma frecuencia.",
-    "opciones": [
-      "Lámparas incandescentes",
-      "Centros de entretenimiento",
-      "Microondas",
-      "Discos duros externos",
-      "Teléfonos inalámbricos",
-      "Reproductores de Blu-ray"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Cuáles dos instrucciones describen los servicios proporcionados por la capa de enlace de datos? (Escoja dos opciones). transmisión de datos. priorización. control de flujo. compatible con la interfaz de red. la subcapa de control de acceso al medio (MAC) y la subcapa de control de enlace lógico (LLC). LLC forma una trama de la PDU de capa de red en un formato que se ajusta a los requisitos de la interfaz de red y los medios. Una PDU de capa de red puede ser para IPv4 o IPv6. La sub-capa MAC he MAC define los procesos de acceso al medio que realiza el hardware. Gestiona el acceso de trama a los medios de red de acuerdo con los requisitos de señalización física (cable de cobre, fibra óptica, inalámbrica, etc.)",
-    "opciones": [
-      "Define el esquema de direccionamiento de entrega de extremo a extremo.",
-      "Gestiona el acceso de tramas a los medios de red.",
-      "Mantiene la ruta entre los dispositivos de origen y destino durante la",
-      "Garantiza que los datos de la aplicación se transmitan de acuerdo con la",
-      "Proporciona una entrega fiable a través del establecimiento de enlaces y el",
-      "Empaque varias PDU de capa 3 en un formato de trama que es"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Cuál es la función del valor CRC que se encuentra en el campo FCS de una trama? valor CRC calculado para verificar la integridad de dicha trama. Si los dos valores no coinciden, se descarta la trama.",
-    "opciones": [
-      "Verificar la dirección física que se encuentra en la trama.",
-      "Verificar la integridad de la trama recibida.",
-      "Calcular el encabezado checksum para el campo de datos de la trama.",
-      "Verificar la dirección lógica que se encuentra en la trama."
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Qué contiene el tráiler de una trama de enlace de datos? detección de errores pertinente a la trama incluida en el campo FCS. El encabezado contiene información de control, como el direccionamiento, mientras que el área que indica la palabra “data” (datos) incluye los datos, la PDU de la capa de transporte y el encabezado IP.",
-    "opciones": [
-      "DATA",
-      "Detección de errores",
-      "Dirección lógica",
-      "Dirección física"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Cuál de estas afirmaciones describe una característica de los campos de encabezado de la trama de la capa de enlace de datos? direcciones de origen y destino de la capa 3. la capa 3 dentro del campo de datos de la trama. Sin embargo, la estructura de la trama y los campos contenidos en el encabezado varían de acuerdo con el protocolo. Los distintos protocolos de capa de enlace de datos pueden utilizar campos distintos, como prioridad/calidad de servicio, control de conexión lógica, control de enlace físico, control del flujo y control de congestión.",
-    "opciones": [
-      "Los campos de encabezado de la trama de Ethernet contienen las",
-      "Incluyen información sobre las aplicaciones de usuario.",
-      "Varían según los protocolos.",
-      "Todos incluyen los campos de control del flujo y de conexión lógica."
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "Un equipo de redes compara las topologías físicas WAN para la conexión de sitios remotos al edificio de una oficina central. ¿Qué topología proporciona alta disponibilidad y conecta algunos sitios remotos, pero no todos? interconectan varios sitios remotos, pero no requieren una conexión entre todos los sitios remotos. Las topologías de malla requieren enlaces punto a punto, donde cada sistema esté conectado a todos los demás sistemas. Una topología punto a punto se da cuando cada dispositivo está conectado a un dispositivo. Las topologías hub-and-spoke utilizan un dispositivo central en una topología en estrella que se conecta a otros dispositivos punto a punto.",
-    "opciones": [
-      "Malla parcial",
-      "Hub-and-spoke",
-      "Malla",
-      "Punto a punto"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Qué dos campos o características examina Ethernet para determinar si una trama recibida es pasada a la capa de enlace de datos o descartada por la NIC? (Escoja dos opciones). mínimo (64 bytes) o si el valor de la secuencia de comprobación de trama calculada (FCS) no coincide con el valor FCS recibido. Auto-MDIX (cruce automático de interfaz dependiente del medio) es tecnología de capa 1 que detecta los tipos de cable directo o cruzado. La dirección MAC de origen no se utiliza para determinar cómo se recibe la trama. CEF (Cisco Express Forwarding) es una tecnología utilizada para acelerar switching a nivel 3.",
-    "opciones": [
-      "Dirección MAC de origen",
-      "Secuencia de verificación de trama",
-      "tamaño mínimo de trama",
-      "CEF",
-      "MDIX automático"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Qué tipo de comunicación de medios no requiere arbitraje en la capa de enlace de datos? recibir en los medios pero no pueden hacerlo simultáneamente. Comunicación full- dúplex: los dos dispositivos pueden transmitir y recibir en los medios al mismo tiempo. La comunicación semidúplex suele basarse en la contencion, mientras que el acceso controlado (determinista) se aplica en tecnologías donde los dispositivos se turnan para acceder al medio.",
-    "opciones": [
-      "Acceso controlado",
-      "Semidúplex",
-      "Dúplex completo",
-      "determinante"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Cuál de las siguientes es una característica de la subcapa LLC? física del medio. dispositivo. capa 3 utilicen la misma interfaz y los mismos medios de red. proporcionan servicios a los protocolos de capa de red. El LLC coloca información en la trama e identifica qué protocolo de capa de red se utiliza para ella. Esta información permite que varios protocolos de capa 3, tales como IPv4 e IPv6, utilicen la misma interfaz y los mismos medios de red.",
-    "opciones": [
-      "Proporciona la delimitación de datos según los requisitos de señalización",
-      "Proporciona el direccionamiento lógico requerido que identifica el",
-      "Coloca en la trama información que permite que varios protocolos de",
-      "Define los procesos de software que proporcionan servicios a la capa física."
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Qué tres partes básicas son comunes a todos los tipos de trama admitidos por la capa de enlace de datos? (Escoja tres opciones). dentro de la misma red. Si bien existen muchos protocolos de capa de enlace de datos diferentes que describen las tramas de la capa de enlace de datos, cada tipo de trama tiene tres partes básicas: Header Data Trailer",
-    "opciones": [
-      "data",
-      "MTU size",
-      "type field",
-      "Valor CRC",
-      "header",
-      "trailer"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "Consulte la ilustración. ¿Cuál es la dirección MAC de destino de la trama de Ethernet al salir del servidor web si el destino final es la PC1? de Ethernet. La dirección MAC (capa 2) cambia en cada segmento de red a lo largo de la ruta. Cuando la trama sale del servidor web, se entrega utilizando la dirección MAC del gateway predeterminado.",
-    "opciones": [
-      "00-60-2F-3A-07-BB",
-      "00-60-2F-3A-07-CC",
-      "00-60-2F-3A-07-AA",
-      "00-60-2F-3A-07-DD"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "Un switch de capa 2 se utiliza para conmutar las tramas entrantes desde un puerto 1000BASE-T a un puerto conectado a una red 100Base-T. ¿Qué método de almacenamiento en búfer de memoria sería el más adecuado para esta tarea? cantidad de tramas almacenadas en el búfer solo se encuentra limitada por el tamaño del búfer de memoria en su totalidad y no se limita al búfer de un solo puerto. Esto permite la transmisión de tramas más amplias y que se descarte una menor cantidad de ellas. Esto es importante para la conmutación asimétrica, la cual se aplica a esta situación, donde las tramas se intercambian entre puertos con distintas velocidades. Con el almacenamiento en búfer de memoria basado en puerto, las tramas se almacenan en colas vinculadas a puertos de entrada y de salida específicos, lo que permite que una única trama retrase la transmisión de todas las tramas en la memoria debido a un puerto de destino ocupado. La memoria caché de nivel 1 es la que se utiliza en las CPU. La configuración fija se refiere a la disposición de los puertos en el hardware del switch.",
-    "opciones": [
-      "Almacenamiento en búfer basado en puerto",
-      "Almacenamiento en búfer de caché de nivel 1",
-      "Almacenamiento en búfer de configuración fija",
-      "Almacenamiento en búfer de memoria compartida"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Cuáles de los siguientes son dos ejemplos de switching por método de corte? Elija dos opciones. realiza una verificación de errores con la CRC antes de reenviarla. A menudo, este método se requiere para el análisis de QOS. El método de envío rápido y el método libre de fragmentos son variaciones del switching por método de corte, en el que el switch solamente recibe parte de la trama antes de comenzar a reenviarla.",
-    "opciones": [
-      "Switching de almacenamiento y envío",
-      "Switching CRC",
-      "Switching QOS",
-      "Switching de envío rápido",
-      "Switching libre de fragmentos"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿En qué método de reenvío de tramas se recibe la trama completa y se realiza una comprobación de CRC para detectar errores antes de reenviarla? variaciones del switching por método de corte, que comienza a reenviar la trama antes de recibirla por completo.",
-    "opciones": [
-      "Switching libre de fragmentos",
-      "Switching de almacenamiento y envío",
-      "Switching por método de corte",
-      "Switching de envío rápido"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Cuál es el propósito del campo FCS en una trama? la transmisión y la recepción de una trama. Esto se hace al comparar el valor de CRC dentro de la trama con un valor de CRC computado de la trama. Si los dos valores no coinciden, se descarta la trama.",
-    "opciones": [
-      "Verificar la dirección lógica del nodo emisor.",
-      "Obtener la dirección MAC del nodo emisor.",
-      "Determinar si ocurrieron errores durante la transmisión y recepción.",
-      "Calcular el encabezado CRC para el campo de datos."
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "Un administrador de red conecta dos switches modernos mediante un cable de conexión directa. Los switches son nuevos y nunca se configuraron. ¿Cuáles son las tres afirmaciones correctas sobre el resultado final de la conexión? (Elija tres). cable por un cable de conexión cruzada. negociarse. admitan ambos switches. a su propia velocidad máxima. que no se necesita un cable de conexión cruzada. full-duplex si ambos switches tienen esa capacidad. Negocian funcionar con la velocidad más alta posible, y la característica MDIX automática está habilitada de manera predeterminada, por lo que no es necesario un cambio de cable.",
-    "opciones": [
-      "La conexión no será posible a menos que el administrador reemplace el",
-      "La capacidad dúplex se debe configurar manualmente porque no puede",
-      "El enlace entre los switches funcionará como full-duplex.",
-      "El enlace entre los switches funcionará a la máxima velocidad que",
-      "Si ambos switches admiten velocidades diferentes, cada switch funcionará",
-      "La característica MDIX automática configurará las interfaces, por lo"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Qué ventaja posee el método de switching de almacenamiento y reenvío en comparación con el método de switching por método de corte? reenvío realiza una verificación de errores en una trama entrante comparando el valor de FCS con sus propios cálculos de FCS después de recibir la trama completa. En comparación, un switch que usa el switching por método de corte toma rápidas decisiones de reenvío e inicia el proceso de reenvío sin esperar la recepción de la trama completa. Por ende, un switch que usa el switching por método de corte puede enviar tramas no válidas a la red. El rendimiento del switching de almacenamiento y envío es más lento en comparación con el rendimiento del switching por método de corte. El dispositivo emisor controla la detección de colisiones. El switching de almacenamiento y reenvío no utiliza la información de IPv4 de capa 3 y 4 para sus decisiones de reenvío.",
-    "opciones": [
-      "Reenvío de tramas más rápido",
-      "Reenvío de tramas utilizando la información de IPv4 de capa 3 y 4",
-      "Detección de colisión",
-      "Verificación de errores de la trama"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Cuál de los siguientes métodos de switching utiliza el valor CRC de una trama? switch recibe la trama completa antes de reenviarla al destino. La porción de comprobación cíclica de redundancia (CRC) del tráiler se utiliza para determinar si la trama se modificó durante el tránsito. En cambio, un switch por método de corte reenvía la trama una vez que se lee la dirección de capa 2 de destino. Dos tipos de switching por método de corte son el método de envío rápido y el método libre de fragmentos.",
-    "opciones": [
-      "Almacenamiento y envío",
-      "Envío rápido",
-      "Libre de fragmentos",
-      "Método de corte"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Cuáles de las siguientes son dos acciones que realiza un switch Cisco? Elija dos opciones. dirección MAC de destino predeterminado encabezado de la trama mantener una tabla de direcciones MAC tabla de direcciones MAC Cuando llega una trama, el switch examina la dirección de origen de capa 2 para armar y mantener la tabla de direcciones MAC de capa 2. Examina la dirección de destino de capa 2 para determinar cómo reenviar la trama. Cuando la dirección de destino se encuentra en la tabla de direcciones MAC, la trama se envía por un puerto específico. Cuando la dirección es desconocida, la trama se envía a todos los puertos que tienen dispositivos conectados a esa red.",
-    "opciones": [
-      "Uso de la tabla de direcciones MAC para enviar tramas por medio de la",
-      "Reenvío de tramas con direcciones IP de destino desconocidas al gateway",
-      "Armado de una tabla de routing basada en la primera dirección IP en el",
-      "Uso de la dirección MAC de origen de las tramas para armar y",
-      "Revisión de la dirección MAC de destino para agregar nuevas entradas a la"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Qué es la función Auto-MDIX? utilizar un cable directo o cruzado. interfaz. un segmento. de acuerdo con el tipo de cable que se utiliza (directo o cruzado) y el tipo de dispositivo que está conectado a ese puerto.Cuando un puerto de un switch está configurado con Auto-MDIX, este switch se puede conectar a otro switch mediante el uso de un cable directo o un cable cruzado.",
-    "opciones": [
-      "Permite a un dispositivo configurar automáticamente una interfaz para",
-      "Permite que un dispositivo configure automáticamente la velocidad de su",
-      "Permite a un switch seleccionar dinámicamente el método de reenvío.",
-      "Permite a un dispositivo configurar automáticamente los ajustes dúplex de"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Cuál es una dirección MAC multicast? 5E.",
-    "opciones": [
-      "FF-FF-FF-FF-FF-FF",
-      "5C-26-0A-4B-19-3E",
-      "00-26-0F-4B-00-3E",
-      "01-00-5E-00-00-03"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "Consulte la ilustración. ¿Cuál es el problema con la terminación que se muestra? importante asegurar que los cables sin trenzar no sean demasiado largos y que el revestimiento de plástico flexible que rodea los cables esté engarzado, es decir, que no haya hilos desnudos. No se debe ver ninguno de los cables de color desde la base del conector.",
-    "opciones": [
-      "No se debería haber quitado la malla de cobre tejida.",
-      "Se está utilizando el tipo de conector incorrecto.",
-      "La longitud de la parte sin trenzar de cada cable es demasiado larga.",
-      "Los cables son demasiado gruesos para el conector que se utiliza."
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "Consulte la ilustración. La PC está conectada al puerto de consola del switch. Todas las demás conexiones se realizan con enlaces FastEthernet. ¿Qué tipos de cables UTP se pueden utilizar para conectar los dispositivos? un switch y un switch con un router. Los cables cruzados se utilizan para interconectar dispositivos similares, como un switch con un switch, un host con un host o un router con un router. Si un switch tuviera funcionalidad MDIX, se podría utilizar un cable cruzado para conectar el switch al router; sin embargo, esa opción no está disponible. Los cables de consola (rollover) se utilizan para conectarse al puerto de consola de un router o de un switch.",
-    "opciones": [
-      "1: cruzado; 2: directo; 3: de consola (rollover)",
-      "1: de consola (rollover); 2: cruzado; 3: directo",
-      "1: cruzado; 2: de consola (rollover); 3: directo",
-      "1: de consola (rollover); 2: directo; 3: cruzado"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "Abra la actividad de PT. Complete las instrucciones de la actividad y luego responda la pregunta. Módulos 4 – 7 Examen de conceptos Ethernet Respuestas Q30¿Cual puerto es usado cuando Switch0 envía tramas a un host con la direccion IPv4? PC0 muestra la dirección IPv4 y la dirección MAC. Cuando se hace ping a la dirección IPv4 10.1.1.5 desde PC0, el switch almacena la dirección MAC de origen (desde PC0) junto con el puerto al que está conectado PC0. Cuando se recibe la respuesta de destino, el switch toma la dirección MAC de destino y compara con las direcciones MAC almacenadas en la tabla de direcciones MAC. La ejecucion comando show mac-address-table en la aplicación Terminal de PC0 muestra dos entradas dinámicas de direcciones MAC. La dirección MAC y la entrada de puerto que no pertenecen a PC0 deben ser la dirección MAC y el puerto del destino con la dirección IPv4 10.1.1.5.",
-    "opciones": [
-      "Fa0/1",
-      "Fa0/5",
-      "Fa0/9",
-      "Fa0/11"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Qué significa el término «atenuación» en la comunicación de datos? Un detector en la interfaz de red de un dispositivo de destino debe recibir una señal que pueda decodificarse exitosamente para que coincida con la señal enviada. No obstante, cuanto más lejos viaja una señal, más se deteriora. Esto se denomina atenuación de señal.",
-    "opciones": [
-      "fuga de señales de un par de cables a otro",
-      "pérdida de intensidad de la señal a medida que aumenta la distancia",
-      "fortalecimiento de una señal mediante un dispositivo de red",
-      "tiempo para que una señal llegue a su destino"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Qué hace que la fibra sea preferible al cableado de cobre para la interconexión de edificios? (Escoja tres opciones). banda mayores que cualquier otro medio de red. A diferencia de los cables de cobre, el cable de fibra óptica puede transmitir señales con menos atenuación y es totalmente inmune a las EMI y RFI.",
-    "opciones": [
-      "mayor potencial de ancho de banda",
-      "fácil de terminar",
-      "mayores distancias por cable",
-      "conexiones duraderas",
-      "menor costo de instalación",
-      "susceptibilidad limitada a EMI/RFI"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Qué término de capa física OSI describe la medida de la transferencia de bits a través de un medio durante un período de tiempo determinado?",
-    "opciones": [
-      "Ancho de banda",
-      "Capacidad de transferencia útil",
-      "Latencia",
-      "rendimiento"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Qué dos funciones se realizan en la subcapa LLC de la capa de enlace de datos OSI? (Escoja dos opciones). red. Otro caso red. de red se utiliza para la trama.",
-    "opciones": [
-      "Permite que IPv4 e IPv6 utilicen la misma interfaz de red y medios.",
-      "Proporciona sincronización entre nodos de origen y de destino.",
-      "Integra varias tecnologías físicas.",
-      "Implementa un trailer para detectar errores de transmisión.",
-      "Agrega información de control de capa 2 a los datos de protocolo de",
-      "Integra varias tecnologías físicas.",
-      "Realiza la encapsulación de datos.",
-      "Controla la NIC responsable de enviar y recibir datos en el medio físico.",
-      "Agrega información de control de capa 2 a los datos de protocolo de",
-      "Coloca en la trama información que identifica qué protocolo de capa"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Qué acción se producirá si un switch recibe una trama y tiene la dirección MAC de origen en la tabla MAC? switch conectado. destino no es local.",
-    "opciones": [
-      "El switch comparte la entrada de la tabla de direcciones MAC con cualquier",
-      "El switch envía la trama a un router conectado porque la dirección MAC de",
-      "El switch no reenvía la trama.",
-      "El switch actualiza el temporizador en esa entrada."
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Qué acción se producirá si un host recibe un marco con una dirección MAC de destino que no reconoce?",
-    "opciones": [
-      "El host descartará la trama.",
-      "El host reenvía la trama a todos los demás hosts.",
-      "El host reenvía la trama al router.",
-      "El host envía la trama al switch para actualizar la tabla de direcciones MAC."
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "Un administrador de redes mide la transferencia de bits a través de la red troncal de la compañía para una aplicación de base de datos de misión crítica. El administrador advierte que el rendimiento de la red está por debajo del ancho de banda esperado. ¿Cuáles son los tres factores que podrían afectar el rendimiento? Elija tres opciones. atraviesan los datos especificado de los enlaces físicos debido a varios factores. Estos factores incluyen la cantidad de tráfico, el tipo de tráfico y la latencia creada por los dispositivos de red que los datos deben atravesar.",
-    "opciones": [
-      "La cantidad de tráfico que cruza la red en el momento",
-      "La sofisticación del método de encapsulamiento aplicado a los datos",
-      "El tipo de tráfico que cruza la red",
-      "La latencia generada por la cantidad de dispositivos de red que",
-      "El ancho de banda de la conexión WAN a Internet",
-      "La confiabilidad de la infraestructura Gigabit Ethernet de la red troncal"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Cuál es la función principal de la capa física en la transmisión de datos en la red? que conforman una trama a través de los medios de red. Esta capa acepta una trama completa de la capa de enlace de datos y la codifica en una serie de señales para poder transmitir al medio local.",
-    "opciones": [
-      "crear las señales que representan los bits en cada trama en el medio",
-      "controlar el acceso a los datos a los medios",
-      "proporcionar direccionamiento físico a los dispositivos",
-      "Determinar las mejores rutas para los paquetes a través de la red"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Cuál de estas afirmaciones describe una topología en estrella extendida? cadena. un dispositivo intermediario central. se conecta a otros dispositivos intermediarios centrales. dispositivo intermediario. centrales interconectan otras topologías en estrella.",
-    "opciones": [
-      "Todos los dispositivos intermediarios y terminales se conectan entre sí en",
-      "Las terminales se conectan entre sí por medio de un bus que se conecta a",
-      "Las terminales se conectan a un dispositivo intermediario central que",
-      "Cada terminal se conecta a su vecino respectivo por medio de un"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Cuáles son las tres formas en que se utiliza el control de acceso a medios en redes? (Escoja tres opciones). datos en el medio. colisiones de datos. acceso a los diferentes medios. acceso a medios. Las redes inalámbricas IEEE 802.11 utilizan CSMA/CA, un método similar. El control de acceso a medios define la forma en que los marcos de datos se colocan en los medios. El método de acceso controlado es determinista, no un acceso basado en contencion a las redes. Dado que cada dispositivo tiene su propio tiempo para usar el medio, las redes de acceso controlado como Token Ring heredado no tienen colisiones.",
-    "opciones": [
-      "El control de acceso a medios proporciona la colocación de tramas de",
-      "El acceso basado en contención también se conoce como determinista.",
-      "Las redes con acceso controlado han reducido el rendimiento debido a",
-      "802.11 utiliza CSMA/CD.",
-      "Ethernet utiliza CSMA/CD.",
-      "Los protocolos en la capa de enlace de datos definen las reglas de"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "Durante el proceso de encapsulamiento, ¿qué ocurre en la capa de enlace de datos para una PC conectada a una red Ethernet? destino. El tráiler incluye un valor CRC en el campo de secuencia de verificación de trama para permitir que el dispositivo receptor determine si la trama se modificó (tiene errores) durante la transmisión.",
-    "opciones": [
-      "Se agrega la dirección lógica.",
-      "Se agrega la dirección física.",
-      "Se agrega una dirección IP.",
-      "Se agrega el número de puerto del proceso."
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Qué tres elementos están contenidos en un encabezado Ethernet y un trailer? (Escoja tres opciones). Indicadores de inicio y terminación de trama que identifican los límites de inicio y terminación de la trama. Direccionamiento: para redes Ethernet, esta parte del encabezado contiene direcciones MAC de origen y destino Escriba el campo para indicar qué protocolo de capa 3 se está utilizando Detección de errores para determinar si la trama llegó sin error",
-    "opciones": [
-      "Dirección MAC de destino",
-      "información de comprobación de errores",
-      "Dirección IP de origen",
-      "Dirección IP de destino",
-      "Dirección MAC de origen"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Cuál de las siguientes es la característica MDIX automática en un switch? corresponda, si se detecta una conexión activa 10/100/1000 Mb/s único cable Ethernet óptico o de cobre cable cruzado o directo de Ethernet cruzado o directo de Ethernet para conectarse a un dispositivo, independientemente del dispositivo que se encuentre en el otro extremo de la conexión.",
-    "opciones": [
-      "La capacidad de activar o desactivar una interfaz de switch, según",
-      "La configuración automática de una interfaz para el funcionamiento a",
-      "La configuración automática del funcionamiento full-duplex a través de un",
-      "La configuración automática de una interfaz para una conexión por"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Qué método de switching tiene el nivel de latencia más bajo? dirección MAC de destino, lo que tiene como resultado la latencia más baja. El método libre de fragmentos lee los primeros 64 bytes antes del reenvío. El método de almacenamiento de envío tiene la latencia más alta porque lee la trama completa antes de comenzar a reenviarla. Los métodos de envío rápido y libre de fragmentos son tipos de switching por método de corte.",
-    "opciones": [
-      "Libre de fragmentos",
-      "Envío rápido",
-      "Almacenamiento y envío",
-      "Método de corte"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "Cuando se usa el método de switching de almacenamiento y envío, ¿qué parte de la trama de Ethernet se usa para realizar una verificación de errores? usa para determinar si la trama se modificó durante el tránsito. Si se verifica la integridad de la trama, esta se reenvía. Si la integridad de la trama no se puede verificar, la trama se descarta.",
-    "opciones": [
-      "Dirección MAC de destino en el encabezado",
-      "CRC en el tráiler",
-      "Tipo de protocolo en el encabezado",
-      "Dirección MAC de origen en el encabezado"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Cuál de las siguientes es una ventaja de utilizar el switching por método de corte en lugar del switching por almacenamiento y envío? velocidades de Ethernet. mayoría de las tramas no válidas. de la trama. de alto rendimiento. para las tecnologías informáticas de alto rendimiento (HPC). El switching por método de corte permite que más tramas no válidas crucen la red en comparación con el switching por almacenamiento y envío. El switching por método de corte puede tomar una decisión de reenvío tan pronto como busque la dirección MAC de destino de la trama.",
-    "opciones": [
-      "Proporciona la flexibilidad para admitir cualquier combinación de",
-      "Tiene un impacto positivo en el ancho de banda debido a que se descarta la",
-      "Toma decisiones de envío rápido basadas en la dirección MAC de origen",
-      "Tiene una latencia más baja, adecuada para aplicaciones informáticas"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Qué tipo de regla de comunicación sería la mejor descripción de CSMA/CD? colisiones (CSMA/CD) es el método de acceso que se utiliza con Ethernet. La regla de comunicación de método de acceso determina de qué forma puede un dispositivo de red ubicar una señal en la portadora. CSMA/CD determina dichas reglas en una red Ethernet, mientras que CSMA/CA lo hace en una LAN inalámbrica 802.11.",
-    "opciones": [
-      "Método de acceso",
-      "Encapsulamiento del mensaje",
-      "Control del flujo",
-      "Codificación del mensaje"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Cuáles son las dos afirmaciones que describen las funciones o características de la subcapa de control de enlace lógico en los estándares de Ethernet? Elija dos opciones. capas superiores del paquete de protocolos. tramas en los medios. comunicación de la capa de enlace de datos con las capas superiores del paquete de protocolos. El control de enlace lógico está especificado en el estándar IEEE 802.2. IEEE 802.3 es un conjunto de estándares que definen los distintos tipos de Ethernet. La subcapa de control de acceso al medio (MAC) es responsable de la ubicación y la recuperación de tramas en los medios. Esta subcapa también es responsable de agregar un encabezado y un tráiler a la unidad de datos de protocolo (PDU) de la capa de red.",
-    "opciones": [
-      "La capa de enlace de datos utiliza LLC para comunicarse con las",
-      "El control de enlace lógico se implementa mediante software.",
-      "La subcapa LLC agrega un encabezado y un tráiler a los datos.",
-      "El control de enlace lógico está especificado en el estándar IEEE 802.3.",
-      "La subcapa LLC es responsable de la ubicación y la recuperación de"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Qué término de capa física OSI describe el proceso por el cual una onda modifica otra onda?",
-    "opciones": [
-      "modulación",
-      "EIA/TIA",
-      "aire",
-      "IEEE"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Qué acción se producirá si un host recibe una trama con una dirección MAC de destino de FF:FF:FF:FF:FF:FF?",
-    "opciones": [
-      "El host envía la trama al switch para actualizar la tabla de direcciones MAC.",
-      "El host reenvía la trama al router.",
-      "El host reenvía la trama a todos los demás hosts.",
-      "El host procesará la trama."
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Qué término de capa física OSI describe el medio físico que utiliza la propagación de la luz?",
-    "opciones": [
-      "rendimiento real",
-      "latencia",
-      "throughput",
-      "Cable de fibra óptica"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Qué dos funciones se realizan en la subcapa LLC de la capa de enlace de datos OSI? (Escoja dos opciones). red.",
-    "opciones": [
-      "Implementa un trailer para detectar errores de transmisión.",
-      "Provides data link layer addressing.",
-      "Permite que IPv4 e IPv6 utilicen la misma interfaz de red y medios.",
-      "Agrega información de control de capa 2 a los datos de protocolo de",
-      "Proporciona sincronización entre nodos de origen y de destino."
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "Que dos funciones se realizan en la subcapa MAC de la capa de enlace de datos OSI? (Escoja dos opciones) se utiliza para la trama. Caso 2 físico. del dispositivo en las capas inferiores. comuniquen a través de un medio compartido. se utiliza para la trama. Caso 3 del dispositivo en las capas inferiores. Caso 4 del dispositivo en las capas inferiores. se utiliza para la trama. físico. Caso 5 fisico comuniquen a traves de un medio comapartido",
-    "opciones": [
-      "Coloca en la trama información que identifica qué protocolo de capa de red",
-      "Proporciona sincronización entre nodos de origen y de destino.",
-      "Agrega información de control de capa 2 a los datos de protocolo de red.",
-      "Implementa un trailer para detectar errores de transmisión.",
-      "Permite que IPv4 e IPv6 utilicen la misma interfaz de red y medios.",
-      "Controla la NIC responsable de enviar y recibir datos en el medio",
-      "Agrega información de control de capa 2 a los datos de protocolo de red.",
-      "Se comunica entre el software de red en las capas superiores y el hardware",
-      "Proporciona un mecanismo para permitir que varios dispositivos se",
-      "Coloca en la trama información que identifica qué protocolo de capa de red",
-      "Agrega información de control de capa 2 a los datos de protocolo de red.",
-      "Integra varias tecnologías físicas.",
-      "Permite que IPv4 e IPv6 utilicen la misma interfaz de red y medios.",
-      "Proporciona sincronización entre nodos de origen y de destino.",
-      "Se comunica entre el software de red en las capas superiores y el hardware",
-      "Se comunica entre el software de red en las capas superiores y el hardware",
-      "Integra varias tecnologías físicas.",
-      "Coloca en la trama información que identifica qué protocolo de capa de red",
-      "Controla la NIC responsable de enviar y recibir datos en el medio",
-      "Agrega información de control de capa 2 a los datos de protocolo de red.",
-      "Controla la NIC responsable de enviar y recibir datos en el medio",
-      "Proporciona un mecanismo para permitir que varios dispositivos se"
-    ],
-    "respuesta": 17
-  },
-  {
-    "pregunta": "¿Qué acción se producirá si un switch recibe una trama con la dirección MAC de destino FF:FF:FF:FF:FF:FF? destino no es local. Otro caso: destino no es local. switch conectado.",
-    "opciones": [
-      "El switch lo reenvía todos los puertos excepto el puerto de entrada.",
-      "El switch envía la trama a un router conectado porque la dirección MAC de",
-      "El switch actualiza el temporizador en esa entrada.",
-      "El switch no reenvía la trama.",
-      "El switch no reenvía la trama.",
-      "El switch envía la trama a un router conectado porque la dirección MAC de",
-      "El switch comparte la entrada de la tabla de direcciones MAC con cualquier",
-      "El switch lo reenvía a todos los puertos excepto el puerto de entrada."
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Qué declaración es verdadera sobre el método de acceso CSMA/CD que se utiliza en Ethernet? puede producir una colisión. después del período de retroceso. colisión ejecuten un algoritmo de retroceso. protocolo de control de acceso a medios de red. Funciona detectando una colisión en el medio y retrocediendo (después de transmitir una señal de atasco) según sea necesario. Cuando un host desea transmitir un fotograma, escucha en el medio para comprobar si el medio está ocupado. Después de que detecta que nadie más está transmitiendo, el host comienza a transmitir el fotograma, también monitorea el nivel actual para detectar una colisión. Si detecta una colisión, transmite una señal especial de atasco para que todos los demás hosts puedan saber que hubo una colisión. El otro host recibirá esta señal de atasco y dejará de transmitir. Después de esto, ambos hosts entran en una fase de retroceso exponencial y reintentan la transmisión.",
-    "opciones": [
-      "Todos los dispositivos de red deben escuchar antes de transmitir.",
-      "Cuando un dispositivo escucha una señal portadora y transmite, no se",
-      "Los dispositivos involucrados en una colisión tienen prioridad para transmitir",
-      "Una señal de interferencia hace que solo los dispositivos que causaron la"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Qué término de capa física OSI describe la capacidad a la que un medio puede transportar datos?",
-    "opciones": [
-      "Ancho de banda",
-      "aire",
-      "EIA/TIA",
-      "IEEE"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Qué término de capa física OSI describe la medida de datos utilizables transferidos durante un período determinado?",
-    "opciones": [
-      "aire",
-      "Cable de fibra óptica",
-      "goodput",
-      "Cable de cobre"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Qué término de capa física OSI describe la cantidad de tiempo, incluidos los retrasos, para que los datos viajen de un punto a otro?",
-    "opciones": [
-      "latencia",
-      "aire",
-      "Cable de fibra óptica",
-      "Cable de cobre"
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Qué acción se producirá si un host recibe una trama con una dirección MAC de destino que no reconoce?",
-    "opciones": [
-      "El host responde al switch con su propia dirección IP.",
-      "El host descartará la trama.",
-      "El host reenvía la trama a todos los demás hosts.",
-      "El host devuelve la trama al switch."
-    ],
-    "respuesta": 0
-  },
-  {
-    "pregunta": "¿Qué término de capa física OSI describe el medio físico para las transmisiones de microondas?",
-    "opciones": [
-      "Rendimiento real",
-      "Aire",
-      "Throughput",
-      "Latencia"
-    ],
-    "respuesta": 0
-  },
+    "pregunta": "¿En qué capa OSI se agrega un número de puerto de origen a",
+    "opciones": [],
+    "respuesta": null
+  }
+]
   {
     "pregunta": "¿Qué término de capa física OSI describe el medio físico que utiliza pulsos eléctricos?",
     "opciones": [
