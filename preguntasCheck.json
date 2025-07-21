@@ -1,0 +1,52 @@
+[
+  {
+    "pregunta": "¿En qué capa OSI se agrega un número de puerto de origen a una PDU durante el proceso de encapsulación?",
+    "opciones": [
+      "Capa de enlace de datos",
+      "Capa de red",
+      "Capa de transporte",
+      "Capa de aplicación"
+    ],
+    "respuesta": 2
+  },
+  {
+    "pregunta": "¿Qué término de capa física OSI describe el medio físico que utiliza pulsos eléctricos?",
+    "opciones": [
+      "Cable de cobre",
+      "aire",
+      "Cable de fibra óptica",
+      "goodput"
+    ],
+    "respuesta": 0
+  },
+  {
+    "pregunta": "¿Cuál de las siguientes es una dirección MAC válida?",
+    "opciones": [
+      "192.168.1.1",
+      "00-1A-2B-3C-4D-5E",
+      "FE80::1",
+      "255.255.255.0"
+    ],
+    "respuesta": 1
+  },
+  {
+    "pregunta": "¿Qué protocolo se utiliza para resolver direcciones IP a direcciones MAC?",
+    "opciones": [
+      "ICMP",
+      "DNS",
+      "ARP",
+      "DHCP"
+    ],
+    "respuesta": 2
+  },
+  {
+    "pregunta": "¿Qué dispositivo opera en la capa de red del modelo OSI?",
+    "opciones": [
+      "Hub",
+      "Switch",
+      "Router",
+      "Bridge"
+    ],
+    "respuesta": 2
+  }
+]
