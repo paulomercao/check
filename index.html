@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cuestionario CHECK!</title>
+  <title>Cuestionario CHECK!!!</title>
   <style>
     body {
       font-family: system-ui, sans-serif;
@@ -66,38 +66,30 @@
   </style>
 </head>
 <body>
-  <h1>Cuestionario del CHECK!!</h1>
+  <h1>Cuestionario del CHECK!!!</h1>
   <div id="quiz"></div>
   <div id="resultado"></div>
   <button id="reiniciar" style="display:none">Reiniciar</button>
   <script>
-    const todasLasPreguntas = [
-      {
-        "pregunta": "¿En qué capa OSI se agrega un número de puerto de origen a una PDU durante el proceso de encapsulación?",
-        "opciones": [
-          "Capa de enlace de datos",
-          "Capa de red",
-          "Capa de transporte",
-          "Capa de aplicación"
-        ],
-        "respuesta": 2
-      },
-      {
-        "pregunta": "¿Qué término de capa física OSI describe el medio físico que utiliza pulsos eléctricos?",
-        "opciones": [
-          "Cable de cobre",
-          "aire",
-          "Cable de fibra óptica",
-          "goodput"
-        ],
-        "respuesta": 0
-      }
-      // Puedes agregar aquí más preguntas usando el mismo formato
-    ];
-
+    let todasLasPreguntas = []; // Ahora se cargará desde el JSON
     let preguntasActuales = [];
     let puntaje = 0;
     let contestadas = 0;
+
+    // Función para cargar las preguntas desde el JSON
+    async function cargarPreguntas() {
+      try {
+        const response = await fetch('preguntasCheck.json');
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        todasLasPreguntas = await response.json();
+        mostrarPreguntas(); // Una vez cargadas, muestra las preguntas
+      } catch (error) {
+        console.error('Error al cargar las preguntas:', error);
+        document.getElementById('quiz').innerHTML = '<p>No se pudieron cargar las preguntas. Intenta de nuevo más tarde.</p>';
+      }
+    }
 
     function mezclarArray(array) {
       for (let i = array.length - 1; i > 0; i--) {
@@ -110,9 +102,15 @@
     function mostrarPreguntas() {
       const quizDiv = document.getElementById("quiz");
       quizDiv.innerHTML = "";
-      preguntasActuales = mezclarArray([...todasLasPreguntas]).slice(0, 10);
+      // Selecciona un máximo de 10 preguntas o todas si hay menos de 10
+      preguntasActuales = mezclarArray([...todasLasPreguntas]).slice(0, Math.min(todasLasPreguntas.length, 10));
       puntaje = 0;
       contestadas = 0;
+
+      if (preguntasActuales.length === 0) {
+        quizDiv.innerHTML = '<p>No hay preguntas disponibles.</p>';
+        return;
+      }
 
       preguntasActuales.forEach((q, idx) => {
         const contenedor = document.createElement("div");
@@ -142,13 +140,17 @@
               btn.classList.add("wrong");
             }
 
-            // Marcar todas las correctas
+            // Marcar todas las correctas si hay múltiples respuestas o la única correcta
             if (Array.isArray(q.respuesta)) {
-              q.respuesta.forEach(idx => {
-                opciones.children[idx].classList.add("correct");
+              q.respuesta.forEach(idxCorrecta => {
+                if (opciones.children[idxCorrecta]) {
+                  opciones.children[idxCorrecta].classList.add("correct");
+                }
               });
             } else {
-              opciones.children[q.respuesta].classList.add("correct");
+              if (opciones.children[q.respuesta]) {
+                opciones.children[q.respuesta].classList.add("correct");
+              }
             }
 
             contestadas++;
@@ -173,11 +175,11 @@
     document.getElementById("reiniciar").onclick = () => {
       document.getElementById("reiniciar").style.display = "none";
       document.getElementById("resultado").textContent = "";
-      mostrarPreguntas();
+      cargarPreguntas(); // Vuelve a cargar y mostrar preguntas al reiniciar
     };
 
-    mostrarPreguntas();
+    // Iniciar la carga de preguntas cuando la página se cargue
+    cargarPreguntas();
   </script>
 </body>
 </html>
-
